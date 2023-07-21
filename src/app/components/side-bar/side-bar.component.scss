@@ -1,0 +1,22 @@
+nav {
+  background-color: black;
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  width: 50px;
+}
+
