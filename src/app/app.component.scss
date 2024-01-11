@@ -1,0 +1,13 @@
+@mixin prueba($theme) {
+  $colors: map-get($theme, colors);
+}
+
+$theme: (
+    primary: orange,
+);
+
+.box{
+  @include prueba($theme);
+  background-color: map-get($theme, primary); // Accede al color "orange"
+
+}
