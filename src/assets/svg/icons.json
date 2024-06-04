@@ -1,40 +1,37 @@
 {
   "icons": [
     {
-      "name": "Group 11",
-      "path": "assets/svg/Group 11.svg"
+      "name": "Books",
+      "path": "assets/svg/books.svg"
     },
     {
-      "name": "Group 12",
-      "path": "assets/svg/Group 12.svg"
+      "name": "Calendar",
+      "path": "assets/svg/calendar.svg"
     },
     {
-      "name": "Group 13",
-      "path": "assets/svg/Group 13.svg"
+      "name": "Call",
+      "path": "assets/svg/call.svg"
+    },
+
+    {
+      "name": "Maps",
+      "path": "assets/svg/maps.svg"
     },
     {
-      "name": "Group 14",
-      "path": "assets/svg/Group 14.svg"
+      "name": "Messages",
+      "path": "assets/svg/messages.svg"
     },
     {
-      "name": "Group 15",
-      "path": "assets/svg/Group 15.svg"
+      "name": "Music",
+      "path": "assets/svg/music.svg"
     },
     {
-      "name": "Group 17",
-      "path": "assets/svg/Group 17.svg"
+      "name": "Nose",
+      "path": "assets/svg/nose.svg"
     },
     {
-      "name": "Group 18",
-      "path": "assets/svg/Group 18.svg"
-    },
-    {
-      "name": "Group 19",
-      "path": "assets/svg/Group 19.svg"
-    },
-    {
-      "name": "Group 24",
-      "path": "assets/svg/Group 24.svg"
+      "name": "Podcast",
+      "path": "assets/svg/podcast.svg"
     }
   ]
 }
