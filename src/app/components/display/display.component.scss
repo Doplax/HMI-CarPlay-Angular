@@ -1,10 +1,16 @@
 .icon-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin: 10px 0;
+
+  img {
+    height: 50px;
+  }
 }
 
 .icon-name {
   margin-right: 10px;
   font-weight: bold;
 }
+
+
