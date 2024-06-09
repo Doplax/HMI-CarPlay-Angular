@@ -7,6 +7,7 @@
       "@src/*":["src/*"],
       "@components/*":["src/app/components/*"],
       "@services/*":["src/app/services/*"],
+      "@modules/*":["src/app/modules/*"],
       "@customTypes/*":["src/app/types/*"],
     },
     "resolveJsonModule": true,             // Permite importar archivos JSON como módulos

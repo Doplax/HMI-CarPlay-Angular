@@ -19,15 +19,15 @@
 }
 
 .icon-container img {
-  height: 50px;
+  height: 100px;
   cursor: pointer;
 
 }
 
 .icon-name {
-  background-color: rgba(60, 60, 60, 0.9); /* Color de fondo oscuro con opacidad */
+  background-color: rgba(60, 60, 60, 0.7); /* Color de fondo oscuro con opacidad */
   color: white; /* Color del texto */
-  font-size: 14px; /* Tamaño de la fuente */
+  font-size: 20px; /* Tamaño de la fuente */
   font-weight: 500; /* Peso de la fuente */
   text-align: center; /* Alineación del texto */
   padding: 5px 10px; /* Espaciado interno para hacer que el label sea más grande */
