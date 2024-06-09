@@ -1,13 +1,12 @@
-<main class="main">
-  <img src="../assets/img/carInterfaceBg.png" alt="background">
-  <div class="container">
+<main class="display">
+  <img src="../assets/img/carInterfaceBg.png" alt="background" />
+  <div class="main">
     <!-- Nav Bar -->
-    <app-side-bar class="nav-container"/>
+    <app-side-bar class="nav" />
 
-    <!-- Displa -->
-    <!--<app-display class="display-container"/>-->
-    <router-outlet></router-outlet>
-
+    <!-- Content -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </main>
-

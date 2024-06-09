@@ -6,9 +6,6 @@
   grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   grid-template-rows: repeat(2, 1fr); /* 2 filas */
   gap: 0px; /* Espacio entre los iconos */
-
-  background-image: url('../../../assets/img/background-homescreen.png');
-  background-size: 100% 100%; /* Ajusta la imagen para que se deforme y cubra todo el contenedor */
 }
 
 .icon-container {
@@ -21,11 +18,15 @@
 .icon-container img {
   height: 100px;
   cursor: pointer;
-
 }
 
 .icon-name {
-  background-color: rgba(60, 60, 60, 0.7); /* Color de fondo oscuro con opacidad */
+  background-color: rgba(
+    60,
+    60,
+    60,
+    0.7
+  ); /* Color de fondo oscuro con opacidad */
   color: white; /* Color del texto */
   font-size: 20px; /* Tamaño de la fuente */
   font-weight: 500; /* Peso de la fuente */
@@ -37,8 +38,4 @@
   cursor: pointer;
 }
 
-
-
-
 // TODO:  Unificar Curosr pointer de alguna manera
-
