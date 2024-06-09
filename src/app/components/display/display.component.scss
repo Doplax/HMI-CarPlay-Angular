@@ -1,16 +1,44 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  grid-template-rows: repeat(2, 1fr); /* 2 filas */
+  gap: 0px; /* Espacio entre los iconos */
+
+  background-image: url('../../../assets/img/background-homescreen.png');
+  background-size: 100% 100%; /* Ajusta la imagen para que se deforme y cubra todo el contenedor */
+}
+
 .icon-container {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
 
-  img {
-    height: 50px;
-  }
+.icon-container img {
+  height: 50px;
+  cursor: pointer;
+
 }
 
 .icon-name {
-  margin-right: 10px;
-  font-weight: bold;
+  background-color: rgba(60, 60, 60, 0.9); /* Color de fondo oscuro con opacidad */
+  color: white; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  font-weight: 500; /* Peso de la fuente */
+  text-align: center; /* Alineación del texto */
+  padding: 5px 10px; /* Espaciado interno para hacer que el label sea más grande */
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block; /* Para ajustar el tamaño al contenido */
+  margin-top: 5px; /* Espaciado superior (opcional) */
+  cursor: pointer;
 }
 
+
+
+
+// TODO:  Unificar Curosr pointer de alguna manera
 
