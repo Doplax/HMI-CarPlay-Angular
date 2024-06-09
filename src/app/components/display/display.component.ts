@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import icons from '@src/assets/svg/icons.json';
+import { Icon } from '@customTypes/global.interfaces'
 
-interface Icon {
-  name: string;
-  path: string;
-}
+
 
 
 @Component({
@@ -13,7 +11,7 @@ interface Icon {
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnInit {
-  iconsList = icons.icons;  // TODO: destructuring in a better way?
+  iconsList: Icon[] = icons.icons;  // TODO: destructuring in a better way?
 
 
   ngOnInit(): void {

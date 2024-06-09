@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import icons from '@src/assets/svg/icons.json';
+import { Icon } from '@customTypes/global.interfaces'
 
-interface Icon {
-  name: string;
-  path: string;
-}
+
 
 @Injectable({
   providedIn: 'root',
