@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import icons from '@src/assets/svg/icons.json';
 import { Icon } from '@customTypes/global.interfaces'
+import icons  from '@src/assets/svg/icons.json';
 
 
 @Component({
