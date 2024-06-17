@@ -9,6 +9,9 @@
       "@services/*":["src/app/services/*"],
       "@modules/*":["src/app/modules/*"],
       "@customTypes/*":["src/app/types/*"],
+      "@shared/*":["src/app/shared/*"],
+      "@assets/*":["src/assets/*"]
+
     },
     "resolveJsonModule": true,             // Permite importar archivos JSON como módulos
     "esModuleInterop": true,               // Mejora la interoperabilidad entre módulos ES6 y CommonJS

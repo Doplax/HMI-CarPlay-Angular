@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import icons from './icons/index.json';
+import icons from '@assets/svg/side-bar/index.json';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,7 +11,8 @@ import icons from './icons/index.json';
 export class SideBarComponent {
   public inconList: any = icons;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
 
   navigateToHome(): void {

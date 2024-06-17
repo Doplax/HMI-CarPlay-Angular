@@ -2,43 +2,43 @@
   "icons": [
     {
       "name": "Books",
-      "path": "assets/svg/books.svg",
+      "path": "assets/svg/home-page/books.svg",
       "route": "#"
     },
     {
       "name": "Calendar",
-      "path": "assets/svg/calendar.svg",
+      "path": "assets/svg/home-page/calendar.svg",
       "route": "#"
     },
     {
       "name": "Call",
-      "path": "assets/svg/call.svg",
+      "path": "assets/svg/home-page/call.svg",
       "route": "call"
     },
 
     {
       "name": "Maps",
-      "path": "assets/svg/maps.svg",
+      "path": "assets/svg/home-page/maps.svg",
       "route": "#"
     },
     {
       "name": "Messages",
-      "path": "assets/svg/messages.svg",
+      "path": "assets/svg/home-page/messages.svg",
       "route": "#"
     },
     {
       "name": "Music",
-      "path": "assets/svg/music.svg",
+      "path": "assets/svg/home-page/music.svg",
       "route": "#"
     },
     {
       "name": "Nose",
-      "path": "assets/svg/nose.svg",
+      "path": "assets/svg/home-page/nose.svg",
       "route": "#"
     },
     {
       "name": "Podcast",
-      "path": "assets/svg/podcast.svg",
+      "path": "assets/svg/home-page/podcast.svg",
       "route": "#"
     }
   ]

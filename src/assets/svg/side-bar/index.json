@@ -1,0 +1,7 @@
+{
+  "flag": "assets/svg/side-bar/flag.svg",
+  "home": "assets/svg/side-bar/home.svg",
+  "volumeDown": "assets/svg/side-bar/volume-down.svg",
+  "volumeUp": "assets/svg/side-bar/volume-up.svg",
+  "powerOff": "assets/svg/side-bar/power-off.svg"
+}
