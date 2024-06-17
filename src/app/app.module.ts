@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BlockScreenComponent } from './shared/components/block-screen/block-screen.component';
+import { LockScreenComponent } from './shared/components/lock-screen/lock-screen.component';
 
 @NgModule({
-  declarations: [AppComponent, SideBarComponent, BlockScreenComponent],
+  declarations: [AppComponent, SideBarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
