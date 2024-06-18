@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LockScreenComponent } from './shared/components/lock-screen/lock-screen.component';
 
 @NgModule({
-  declarations: [AppComponent, SideBarComponent],
+  declarations: [AppComponent, SideBarComponent, LockScreenComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

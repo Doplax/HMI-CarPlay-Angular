@@ -5,8 +5,12 @@
     <app-side-bar class="nav" />
 
     <!-- Content -->
-    <div class="content">
+    <div class="content" *ngIf="isRunning; else showStopped">
       <router-outlet></router-outlet>
     </div>
+
+    <ng-template #showStopped>
+      <app-lock-screen></app-lock-screen>
+    </ng-template>
   </div>
 </main>
