@@ -17,7 +17,7 @@ export class SideBarComponent {
 
 
   navigateToHome(): void {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 
 
