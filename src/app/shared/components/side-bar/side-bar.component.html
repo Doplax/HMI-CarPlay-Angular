@@ -3,7 +3,7 @@
     <li>
       <img [src]="inconList.flag" alt="Flag Icon">
     </li>
-    <li>
+    <li (click)="navigateToHome()">
       <img [src]="inconList.home" alt="Home Icon">
     </li>
     <li>
@@ -12,7 +12,7 @@
     <li>
       <img [src]="inconList.volumeDown" alt="Volume Down Icon">
     </li>
-    <li>
+    <li (click)="currentState.switchRunningState()">
       <img [src]="inconList.powerOff" alt="Power Off Icon">
     </li>
   </ul>
