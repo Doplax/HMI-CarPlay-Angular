@@ -14,8 +14,6 @@ export class AppComponent implements OnDestroy {
     this.subscriptions.add(
       this.currentStateService.getRunningState().subscribe(status => {
         this.isRunning = status;
-        this.isRunning = false ; // TODO: Delete this line
-
       })
     );
   }
