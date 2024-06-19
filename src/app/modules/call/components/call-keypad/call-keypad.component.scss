@@ -1,0 +1,36 @@
+/* numeric-keypad.component.css */
+.keypad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #4c4c4c;
+  border-radius: 50%;
+  color: white;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.key.highlighted {
+  background-color: #5cc7ff;
+}
+
+.key-number {
+  font-size: 24px;
+}
+
+.key-letters {
+  font-size: 12px;
+}

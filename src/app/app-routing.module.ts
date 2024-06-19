@@ -7,9 +7,10 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () =>
       import('@modules/home/home.module').then((m) => m.HomeModule),
-  }, // Ruta raíz correctamente definida
+  },
 
   {
+
     path: 'call',
     loadChildren: () =>
       import('@modules/call/call.module').then((m) => m.CallModule),
