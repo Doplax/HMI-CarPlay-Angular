@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LockScreenComponent implements OnInit {
 
   public currentTime:any
+  public currentDate:any
+
 
 
   ngOnInit(): void {
@@ -19,7 +21,9 @@ export class LockScreenComponent implements OnInit {
   }
 
   updateTime() {
-    this.currentTime = new Date().toLocaleTimeString();
+    const date = new Date()
+    this.currentTime = date.toLocaleTimeString();
+    this.currentDate = date.toLocaleDateString();
   }
 
 
