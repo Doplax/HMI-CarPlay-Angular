@@ -9,7 +9,16 @@
 
   p {
     color: white;
-    font-size: 80px;
     font-weight: bold;
   }
+}
+
+.time {
+  font-size: 80px;
+}
+
+.date {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
 }
