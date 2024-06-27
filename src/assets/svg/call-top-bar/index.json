@@ -1,0 +1,17 @@
+{
+  "top_bar_contacts_highlighted": "assets/svg/side-bar/top-bar-contacts-highlighted.svg",
+  "top_bar_contacts_selected": "assets/svg/side-bar/top-bar-contacts-selected.svg",
+  "top_bar_contacts_static": "assets/svg/side-bar/top-bar-contacts-static.svg",
+  "top_bar_favorites_highlighted": "assets/svg/side-bar/top-bar-favorites-highlighted.svg",
+  "top_bar_favorites_selected": "assets/svg/side-bar/top-bar-favorites-selected.svg",
+  "top_bar_favorites_static": "assets/svg/side-bar/top-bar-favorites-static.svg",
+  "top_bar_keypad_highlighted": "assets/svg/side-bar/top-bar-keypad-highlighted.svg",
+  "top_bar_keypad_selected": "assets/svg/side-bar/top-bar-keypad-selected.svg",
+  "top_bar_keypad_static": "assets/svg/side-bar/top-bar-keypad-static.svg",
+  "top_bar_recents_highlighted": "assets/svg/side-bar/top-bar-recents-highlighted.svg",
+  "top_bar_recents_selected": "assets/svg/side-bar/top-bar-recents-selected.svg",
+  "top_bar_recents_static": "assets/svg/side-bar/top-bar-recents-static.svg",
+  "top_bar_voicemail_highlighted": "assets/svg/side-bar/top-bar-voicemail-highlighted.svg",
+  "top_bar_voicemail_selected": "assets/svg/side-bar/top-bar-voicemail-selected.svg",
+  "top_bar_voicemail_static": "assets/svg/side-bar/top-bar-voicemail-static.svg"
+}
