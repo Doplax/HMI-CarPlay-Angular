@@ -1,14 +1,18 @@
 <main class="display">
   <img src="../assets/img/carInterfaceBg.png" alt="background" />
   <div class="main">
-    <!-- Nav Bar -->
+      <!-- Nav Bar -->
     <app-side-bar class="nav" />
 
     <!-- Content -->
     <div class="content" *ngIf="isRunning; else showStopped">
+      <!-- Volume -->
+      <app-volume-box></app-volume-box>
+      
       <router-outlet></router-outlet>
     </div>
 
+    <!-- Lock Screen -->
     <ng-template #showStopped>
       <app-lock-screen class="content"></app-lock-screen>
     </ng-template>
