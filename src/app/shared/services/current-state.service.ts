@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CurrentStateService {
-  public isRunning$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true); // Valor inicial para lockScreen
-  public volumeLevel$: BehaviorSubject<number> = new BehaviorSubject<number>(50);
+  public isRunning$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    true
+  ); // Valor inicial para lockScreen
+  public volumeLevel$: BehaviorSubject<number> = new BehaviorSubject<number>(
+    50
+  );
 
-  constructor() { }
-
+  constructor() {}
+  // Lock screen
   switchRunningState(): void {
     this.isRunning$.next(!this.isRunning$.value);
   }
@@ -18,26 +22,59 @@ export class CurrentStateService {
     return this.isRunning$.asObservable();
   }
 
-  turnUpVolume() {
-    let currentVolumeLevel = this.volumeLevel$.value
+  /** TODO: Review this method
+   * Gradually changes the volume level, either increasing or decreasing it
+   * by 10 units with smooth increments of 1 unit every 25 milliseconds.
+   *
+   * @param {boolean} isIncreasing - Indicates the direction of the volume change.
+   *  - `true` to increase the volume.
+   *  - `false` to decrease the volume.
+   *
+   * The function uses `setInterval` to change the volume by one unit every 25 milliseconds
+   * until the target is reached, which is 10 units more or less than the current volume,
+   * without exceeding the limits of 0 to 100.
+   *
+   * Usage example:
+   * - `changeVolume(true)` will increase the volume.
+   * - `changeVolume(false)` will decrease the volume.
+   */
+  changeVolume(isIncreasing: boolean) {
+    const currentVolumeLevel = this.volumeLevel$.value;
+    const incrementAmount = 1;
+    const intervalTime = 25; // Adjusted for a smoother increment
 
-    if (currentVolumeLevel < 100) {
-      const newVolumeLevel =  this.volumeLevel$.value + 10
-      this.volumeLevel$.next(newVolumeLevel);
-    }
-  }
+    if (isIncreasing) {
+      if (currentVolumeLevel < 100) {
+        const targetVolumeLevel = Math.min(currentVolumeLevel + 10, 100);
 
-  turnDownVolume() {
-    let currentVolumeLevel = this.volumeLevel$.value
+        const interval = setInterval(() => {
+          const updatedVolumeLevel = this.volumeLevel$.value;
 
-    if (currentVolumeLevel > 0) {
-      const newVolumeLevel =  this.volumeLevel$.value - 10
-      this.volumeLevel$.next(newVolumeLevel);
+          if (updatedVolumeLevel < targetVolumeLevel) {
+            this.volumeLevel$.next(updatedVolumeLevel + incrementAmount);
+          } else {
+            clearInterval(interval);
+          }
+        }, intervalTime);
+      }
+    } else {
+      if (currentVolumeLevel > 0) {
+        const targetVolumeLevel = Math.max(currentVolumeLevel - 10, 0);
+
+        const interval = setInterval(() => {
+          const updatedVolumeLevel = this.volumeLevel$.value;
+
+          if (updatedVolumeLevel > targetVolumeLevel) {
+            this.volumeLevel$.next(updatedVolumeLevel - incrementAmount);
+          } else {
+            clearInterval(interval);
+          }
+        }, intervalTime);
+      }
     }
   }
 
   getVolumeLevel() {
     return this.volumeLevel$.asObservable();
   }
-
 }
