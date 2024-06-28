@@ -1,4 +1,30 @@
+// TODO: Manage color and withs using variables / Mixins
+:host {
+  position: absolute;
+  width: 1050px;
+  margin-left: 25px;
+}
+
+div {
+  height: 150px;
+  width: 100%;
+  background-color: rgb(52, 52, 52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 0px 20px 20px ;
+  box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.3);
+}
 label {
-  padding-right: 10px;
-  font-size: 1rem;
+  padding: 0px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 400;
+}
+
+progress {
+  margin-top: 20px;
+  width: 500px;
+  height: 20px;
 }
