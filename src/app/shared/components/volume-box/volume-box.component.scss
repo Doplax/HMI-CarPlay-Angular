@@ -1,5 +1,7 @@
-// TODO: Manage color and withs using variables / Mixins
 :host {
+  --progress-bar-colour: rgb(175, 135, 76); /* Declares the primary color variable */
+  --background-color: rgb(52, 52, 52); /* Declares the background color variable */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* Declares the shadow color variable */
   position: absolute;
   width: 1050px;
   margin-left: 25px;
@@ -8,13 +10,13 @@
 div {
   height: 150px;
   width: 100%;
-  background-color: rgb(52, 52, 52);
+  background-color: var(--background-color); /* Uses the background color variable */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 0px 0px 20px 20px;
-  box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 20px 10px var(--shadow-color); /* Uses the shadow color variable */
 }
 
 label {
@@ -28,4 +30,19 @@ progress {
   margin-top: 20px;
   width: 500px;
   height: 20px;
+  background: var(--progress-bar-colour);
+  border-radius: 10px; /* Round the corners of the <progress> element */
+  overflow: hidden; /* Necessary to apply the rounding correctly */
+}
+
+/* WebKit browsers */
+progress::-webkit-progress-value {
+  background: var(--progress-bar-colour);
+  border-radius: 10px;
+}
+
+/* Firefox browsers */
+progress::-moz-progress-bar {
+  background: var(--progress-bar-colour);
+  border-radius: 10px;
 }
