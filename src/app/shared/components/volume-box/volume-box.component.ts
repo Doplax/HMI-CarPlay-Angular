@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { VolumeService } from '../../services/volume.service';
+import { VolumeService } from '@shared/services/volume.service';
 
 @Component({
   selector: 'app-volume-box',
