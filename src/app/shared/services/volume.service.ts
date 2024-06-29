@@ -22,7 +22,7 @@ export class VolumeService {
   // Resets the visibility timer to hide volume control after 4 seconds.
   private resetVisibilityTimer() {
     this.visibilityTimerSubscription?.unsubscribe();
-    this.visibilityTimerSubscription = timer(4000).subscribe(() => {
+    this.visibilityTimerSubscription = timer(1700).subscribe(() => {
       this.isVolumeVisible$.next(false);
     });
   }
