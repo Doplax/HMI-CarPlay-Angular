@@ -11,12 +11,12 @@
     </li>
 
     <!-- Volume Up -->
-    <li (click)="currentState.changeVolume(true)">
+    <li (click)="volumeService.changeVolume(true)">
       <img [src]="inconList.volumeUp" alt="Volume Up Icon" />
     </li>
 
     <!-- Volume Down -->
-    <li (click)="currentState.changeVolume(false)">
+    <li (click)="volumeService.changeVolume(false)">
       <img [src]="inconList.volumeDown" alt="Volume Down Icon" />
     </li>
 

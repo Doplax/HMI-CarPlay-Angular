@@ -1,4 +1,4 @@
-<div>
+<div [ngClass]="{'isVisible': isVisible}">
   <label for="file">Volume Level</label>
   <progress id="file" max="100" [value]="volumeLevel"></progress>
 </div>
