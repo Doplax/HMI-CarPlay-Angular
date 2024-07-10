@@ -5,9 +5,12 @@ import { BehaviorSubject, Subscription, timer } from 'rxjs';
   providedIn: 'root',
 })
 export class VolumeService {
-  public volumeLevel$: BehaviorSubject<number> = new BehaviorSubject<number>(50);
-  public isVolumeVisible$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  private visibilityTimerSubscription: Subscription | null = null;  // Tracks timer subscription
+  public volumeLevel$: BehaviorSubject<number> = new BehaviorSubject<number>(
+    50
+  );
+  public isVolumeVisible$: BehaviorSubject<boolean> =
+    new BehaviorSubject<boolean>(false);
+  private visibilityTimerSubscription: Subscription | null = null; // Tracks timer subscription
 
   constructor() {}
 
@@ -19,10 +22,12 @@ export class VolumeService {
     this.resetVisibilityTimer();
   }
 
-  // Resets the visibility timer to hide volume control after 4 seconds.
+  // Resets the visibility timer to hide volume control after X miliseconds.
   private resetVisibilityTimer() {
+    const miliseconds = 1700;
+
     this.visibilityTimerSubscription?.unsubscribe();
-    this.visibilityTimerSubscription = timer(1700).subscribe(() => {
+    this.visibilityTimerSubscription = timer(miliseconds).subscribe(() => {
       this.isVolumeVisible$.next(false);
     });
   }
@@ -43,9 +48,14 @@ export class VolumeService {
 
     const interval = setInterval(() => {
       const updatedVolumeLevel = this.volumeLevel$.value;
-      if ((isIncreasing && updatedVolumeLevel < targetVolumeLevel) ||
-          (!isIncreasing && updatedVolumeLevel > targetVolumeLevel)) {
-        this.volumeLevel$.next(updatedVolumeLevel + (isIncreasing ? incrementAmount : -incrementAmount));
+      if (
+        (isIncreasing && updatedVolumeLevel < targetVolumeLevel) ||
+        (!isIncreasing && updatedVolumeLevel > targetVolumeLevel)
+      ) {
+        this.volumeLevel$.next(
+          updatedVolumeLevel +
+            (isIncreasing ? incrementAmount : -incrementAmount)
+        );
       } else {
         clearInterval(interval);
       }
