@@ -14,8 +14,7 @@
 
     },
     "resolveJsonModule": true,             // Permite importar archivos JSON como módulos
-    "esModuleInterop": true,               // Mejora la interoperabilidad entre módulos ES6 y CommonJS
-    "allowSyntheticDefaultImports": true,  // Permite importar módulos sin exportación predeterminada como si la tuvieran
+    "esModuleInterop": true, // Permite importar módulos sin exportación predeterminada como si la tuvieran
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -25,7 +24,6 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
