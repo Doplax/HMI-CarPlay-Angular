@@ -1,7 +1,9 @@
 <!-- numeric-keypad.component.html -->
 <div class="keypad-container">
-  <div class="key" *ngFor="let key of keys" [ngClass]="{'highlighted': key.highlighted}">
-    <div class="key-number">{{ key.number }}</div>
-    <div class="key-letters">{{ key.letters }}</div>
-  </div>
+  @for (key of keys; track key) {
+    <div class="key" [ngClass]="{'highlighted': key.highlighted}">
+      <div class="key-number">{{ key.number }}</div>
+      <div class="key-letters">{{ key.letters }}</div>
+    </div>
+  }
 </div>
