@@ -3,9 +3,10 @@ import { Subscription } from 'rxjs';
 import { VolumeService } from '@shared/services/volume.service';
 
 @Component({
-  selector: 'app-volume-box',
-  templateUrl: './volume-box.component.html',
-  styleUrls: ['./volume-box.component.scss'],
+    selector: 'app-volume-box',
+    templateUrl: './volume-box.component.html',
+    styleUrls: ['./volume-box.component.scss'],
+    standalone: false
 })
 export class VolumeBoxComponent implements OnDestroy {
   // Todo: is the better way to subscribe and unsubscribe? or passing props from the parent

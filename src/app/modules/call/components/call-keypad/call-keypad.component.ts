@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-call-keypad',
-  templateUrl: './call-keypad.component.html',
-  styleUrls: ['./call-keypad.component.scss']
+    selector: 'app-call-keypad',
+    templateUrl: './call-keypad.component.html',
+    styleUrls: ['./call-keypad.component.scss'],
+    standalone: false
 })
 export class CallKeypadComponent {
   keys = [

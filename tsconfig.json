@@ -4,18 +4,30 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@src/*":["src/*"],
-      "@components/*":["src/app/shared/components/*"],
-      "@services/*":["src/app/services/*"],
-      "@modules/*":["src/app/modules/*"],
-      "@customTypes/*":["src/app/types/*"],
-      "@shared/*":["src/app/shared/*"],
-      "@assets/*":["src/assets/*"]
-
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/app/shared/components/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ],
+      "@modules/*": [
+        "src/app/modules/*"
+      ],
+      "@customTypes/*": [
+        "src/app/types/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ]
     },
-    "resolveJsonModule": true,             // Permite importar archivos JSON como módulos
-    "esModuleInterop": true,               // Mejora la interoperabilidad entre módulos ES6 y CommonJS
-    "allowSyntheticDefaultImports": true,  // Permite importar módulos sin exportación predeterminada como si la tuvieran
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -25,9 +37,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
