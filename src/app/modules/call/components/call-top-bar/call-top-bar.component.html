@@ -1,28 +1,28 @@
 <nav>
   <ul>
-    <!-- Flag -->
-    <li>
-      <img [src]="iconList.top_bar_favorites_static" alt="Flag Icon" />
+    <!-- Favorites -->
+    <li routerLink="favorites">
+      <img [src]="iconList.top_bar_favorites_static" alt="Favorites page" />
     </li>
 
-    <!-- Home -->
-    <li >
-      <img [src]="iconList.top_bar_recents_static" alt="Home Icon" />
+    <!-- Recents -->
+    <li routerLink="recents">
+      <img [src]="iconList.top_bar_recents_static" alt="Recents Page" />
     </li>
 
-    <!-- Volume Up -->
-    <li >
-      <img [src]="iconList.top_bar_contacts_static" alt="Volume Up Icon" />
+    <!-- Contacts -->
+    <li routerLink="contacts">
+      <img [src]="iconList.top_bar_contacts_static" alt="Contacts Page" />
     </li>
 
-    <!-- Volume Down -->
-    <li>
-      <img [src]="iconList.top_bar_keypad_static" alt="Volume Down Icon" />
+    <!-- KayPad -->
+    <li routerLink="keypad">
+      <img [src]="iconList.top_bar_keypad_static" alt="KayPad Page" />
     </li>
 
     <!-- Power Off -->
-    <li >
-      <img [src]="iconList.top_bar_voicemail_static" alt="Power Off Icon" />
+    <li routerLink="power-off">
+      <img [src]="iconList.top_bar_voicemail_static" alt="Voicemail Page" />
     </li>
   </ul>
 </nav>
