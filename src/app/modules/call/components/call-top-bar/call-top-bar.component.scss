@@ -1,10 +1,21 @@
-img {
-  height: 70px;
-}
+@use 'variables' as vars;
 
 ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  li {
+    cursor: pointer;
+    list-style: none;
+
+    img {
+      height: 70px;
+      &:hover {
+        background-color: vars.$higlighted-blue;
+        border-radius: 10px;
+      }
+    }
+  }
 
 }

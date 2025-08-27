@@ -1,19 +1,12 @@
 :host {
   display: flex;
   flex-direction: column;
-  
   height: 100%;
   width: 100%;
-
-
   background-color: #242424;
-
 }
 
-
-.top-bar {
-  display: flex;
-  height: 40px;
-  background-color: red;
+.call-layout-page {
+  height: 100%;
   width: 100%;
 }

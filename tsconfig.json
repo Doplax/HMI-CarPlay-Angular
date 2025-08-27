@@ -7,23 +7,17 @@
       "@src/*": [
         "src/*"
       ],
-      "@components/*": [
-        "src/app/shared/components/*"
-      ],
-      "@services/*": [
-        "src/app/services/*"
-      ],
       "@modules/*": [
         "src/app/modules/*"
-      ],
-      "@customTypes/*": [
-        "src/app/types/*"
       ],
       "@shared/*": [
         "src/app/shared/*"
       ],
       "@assets/*": [
         "src/assets/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
       ]
     },
     "resolveJsonModule": true,
