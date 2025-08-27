@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-recents-card',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './recents-card.component.scss'
 })
 export class RecentsCardComponent {
+  @Input() name: string = 'Recents';
+  @Input() date: string = 'Recents';
+
 
 }
