@@ -8,12 +8,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('@modules/home/home.module').then((m) => m.HomeModule),
   },
-
   {
-
     path: 'call',
     loadChildren: () =>
       import('@modules/call/call.module').then((m) => m.CallModule),
+  },
+  {
+    path: 'maps',
+    loadChildren: () =>
+      import('@modules/maps/maps-routing.module').then((m) => m.MapsRoutingModule),
   },
 ];
 

@@ -11,3 +11,12 @@
 [] does it make sense to handle routes using svg/icons.json?
 
 
+[] use icons route or move routes to his router file?
+
+
+# CALL 
+[] Navegacion entre modulos 
+[] Usar IsActive para las rutas y mostrar el icono,
+[] mover variables de colores a un fichero global
+[] Página de Contacts
+[] Hacer componente que sirva para mostrar recientes

@@ -19,7 +19,7 @@
     {
       "name": "Maps",
       "path": "assets/svg/home-page/maps.svg",
-      "route": "#"
+      "route": "maps"
     },
     {
       "name": "Messages",

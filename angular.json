@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "outputPath": {
               "base": "dist/car-interface"
             },
@@ -106,28 +111,40 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "style": "scss",
+      "standalone": false,
+      "skipTests": true,
+      "changeDetection": "Default"
     },
     "@schematics/angular:directive": {
-      "type": "directive"
+      "type": "directive",
+      "standalone": false,
+      "skipTests": true
     },
     "@schematics/angular:service": {
-      "type": "service"
+      "type": "service",
+      "skipTests": true
     },
     "@schematics/angular:guard": {
-      "typeSeparator": "."
+      "typeSeparator": ".",
+      "skipTests": true
     },
     "@schematics/angular:interceptor": {
-      "typeSeparator": "."
+      "typeSeparator": ".",
+      "skipTests": true
     },
     "@schematics/angular:module": {
       "typeSeparator": "."
     },
     "@schematics/angular:pipe": {
-      "typeSeparator": "."
+      "standalone": false,
+      "typeSeparator": ".",
+      "skipTests": true
     },
     "@schematics/angular:resolver": {
-      "typeSeparator": "."
+      "typeSeparator": ".",
+      "skipTests": true
     }
   }
 }
