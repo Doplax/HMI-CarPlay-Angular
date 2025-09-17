@@ -1,5 +1,36 @@
-/* numeric-keypad.component.css */
+@use "variables" as vars;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.number-container{
+  min-height: 40px;
+
+  .dialed-number{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+
+  .backspace-btn {
+    width: 30px;
+    background-color: vars.$background-color;
+    img {
+      fill: #32d74b;
+      color: red;
+    }
+  }
+}
+
 .keypad-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -16,16 +47,18 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: #4c4c4c;
+  background-color: vars.$basic-grey;
   border-radius: 50%;
   color: white;
   font-family: Arial, sans-serif;
   cursor: pointer;
+
+  &:focus {
+    background-color: vars.$higlighted-blue;
+  }
 }
 
-.key.highlighted {
-  background-color: #5cc7ff;
-}
+
 
 .key-number {
   font-size: 24px;
@@ -33,4 +66,25 @@
 
 .key-letters {
   font-size: 12px;
+}
+
+
+button.call-btn{
+  position: absolute;
+  background-color: #32d74b;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  bottom: 20px;
+  right: -100px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  img {
+    width: 30px;
+  }
+
 }

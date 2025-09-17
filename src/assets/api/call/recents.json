@@ -1,0 +1,12 @@
+[
+  { "name": "John Smith", "time": "09:15", "favorite": true, "deviceType": "mobile" },
+  { "name": "Emma Johnson", "time": "11:30", "deviceType": "desktop" },
+  { "name": "Michael Brown", "time": "14:45", "favorite": false, "deviceType": "mobile" },
+  { "name": "Olivia Williams", "time": "08:50", "favorite": true, "deviceType": "desktop" },
+  { "name": "Daniel Jones", "time": "16:10", "deviceType": "mobile" },
+  { "name": "Sophia Miller", "time": "13:05", "favorite": true, "deviceType": "desktop" },
+  { "name": "James Davis", "time": "10:20", "deviceType": "mobile" },
+  { "name": "Ava Garcia", "time": "12:40", "favorite": false, "deviceType": "desktop" },
+  { "name": "William Martinez", "time": "15:55", "favorite": true, "deviceType": "mobile" },
+  { "name": "Isabella Rodriguez", "time": "17:25", "deviceType": "desktop" }
+]

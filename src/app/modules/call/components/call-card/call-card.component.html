@@ -1,0 +1,40 @@
+@switch (CardType) {
+  @case (CardTypeEnum.contacts) {
+    <div class="recent-card">
+      <div class="left">
+        <span class="icon">📞</span>
+        <div class="labels">
+          <div class="header">{{callData.name}}</div>
+          <!--<div class="subhead">{{CardType}}</div>-->
+        </div>
+      </div>
+      <!--<div class="right">{{time}}</div>-->
+    </div>
+  }
+
+  @case (CardTypeEnum.favorites) {
+    <div class="recent-card">
+      <div class="left">
+        <span class="icon">📞</span>
+        <div class="labels">
+          <div class="header">{{callData.name}}</div>
+          <!--<div class="subhead">{{CardType}}</div>-->
+        </div>
+      </div>
+      <div class="right">{{callData.time}}</div>
+    </div>
+  }
+
+  @case (CardTypeEnum.recents) {
+    <div class="recent-card">
+      <div class="left">
+        <span class="icon">📞</span>
+        <div class="labels">
+          <div class="header">{{callData.name}}</div>
+          <div class="subhead">{{callData.deviceType}}</div>
+        </div>
+      </div>
+      <div class="right">{{callData.time}}</div>
+    </div>
+  }
+}

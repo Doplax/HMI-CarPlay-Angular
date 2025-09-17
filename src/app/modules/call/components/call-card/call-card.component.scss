@@ -1,0 +1,52 @@
+@use "variables" as vars;
+
+.recent-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  background: vars.$basic-grey;
+  transition: background 0.2s;
+
+  &:hover {
+    background: vars.$higlighted-blue;
+    cursor: pointer;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 16px;
+    }
+
+    .labels {
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .subhead {
+        font-size: 1.1rem;
+        color: #bdbdbd;
+        margin-top: 2px;
+
+      }
+    }
+  }
+
+  .right {
+    color: #bdbdbd;
+    font-size: 1.2rem;
+
+  }
+}

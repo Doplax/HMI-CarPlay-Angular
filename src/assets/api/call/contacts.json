@@ -1,0 +1,12 @@
+[
+  { "name": "John Smith", "time": "09:15", "favorite": true },
+  { "name": "Emma Johnson", "time": "11:30" },
+  { "name": "Michael Brown", "time": "14:45", "favorite": false },
+  { "name": "Olivia Williams", "time": "08:50", "favorite": true },
+  { "name": "Daniel Jones", "time": "16:10" },
+  { "name": "Sophia Miller", "time": "13:05", "favorite": true },
+  { "name": "James Davis", "time": "10:20" },
+  { "name": "Ava Garcia", "time": "12:40", "favorite": false },
+  { "name": "William Martinez", "time": "15:55", "favorite": true },
+  { "name": "Isabella Rodriguez", "time": "17:25" }
+]

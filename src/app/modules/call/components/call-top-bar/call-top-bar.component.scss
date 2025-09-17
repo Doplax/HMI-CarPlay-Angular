@@ -1,21 +1,24 @@
-@use 'variables' as vars;
+@use "variables" as vars;
 
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+nav {
+  padding: 20px;
 
-  li {
-    cursor: pointer;
-    list-style: none;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    img {
-      height: 70px;
-      &:hover {
-        background-color: vars.$higlighted-blue;
-        border-radius: 10px;
+    li {
+      cursor: pointer;
+      list-style: none;
+
+      img {
+        height: 70px;
+        &:hover {
+          background-color: vars.$higlighted-blue;
+          border-radius: 10px;
+        }
       }
     }
   }
-
 }
