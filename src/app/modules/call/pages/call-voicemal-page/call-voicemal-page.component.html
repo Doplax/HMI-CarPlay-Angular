@@ -3,15 +3,17 @@
   <div class="voice-container">
     <h1>Buzón de voz</h1>
     <p>Llamando...</p>
+    <fa-icon [icon]="['fas','phone']"/>
+    <!--<i class="fas-solid fas-phone"></i>-->
   </div>
 
   <div class="image-wrapper">
-    @for(icon of icons; track $index){
+    <!--@for(icon of icons; track $index){
       <div class="item-container" [ngClass]="icon.class">
         <img [src]="icon.image" [alt]="icon.title"/>
         <span>{{icon.title}}</span>
       </div>
-    }
+    }-->
   </div>
 
 </main>

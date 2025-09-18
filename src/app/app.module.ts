@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +23,11 @@ import { TopBarComponent } from '@shared/components/top-bar/top-bar.component';
     TopBarComponent,
   ],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule
+  ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}

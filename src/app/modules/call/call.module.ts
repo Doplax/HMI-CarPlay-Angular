@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CallRoutingModule } from './call-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 // Pages
 import { CallContactsPageComponent } from './pages/call-contacts-page/call-contacts-page.component';
 import { CallRecentsPageComponent } from './pages/call-recents-page/call-recents-page.component';
@@ -16,7 +18,6 @@ import { CallCardComponent } from './components/call-card/call-card.component';
   declarations: [
     //Pages
     CallLayoutPageComponent,
-    CallContactsPageComponent,
     CallRecentsPageComponent,
     CallContactsPageComponent,
     CallKeypadPageComponent,
@@ -27,6 +28,10 @@ import { CallCardComponent } from './components/call-card/call-card.component';
     CallCardComponent
 
   ],
-  imports: [CommonModule, CallRoutingModule],
+  imports: [
+    CommonModule,
+    CallRoutingModule,
+    FontAwesomeModule
+  ],
 })
 export class CallModule {}
