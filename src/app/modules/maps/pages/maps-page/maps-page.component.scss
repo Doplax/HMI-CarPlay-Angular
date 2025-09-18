@@ -1,4 +1,28 @@
-#map {
-  height: 100%;
-  width: 100%;
+//:host {
+//  display: block;
+//  height: 100%;
+//  width: 100%;
+//}
+
+
+
+.maps-page{
+ position: relative;
+ height: 100%;
+ width: 100%;
+
+ #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  maps-navigation-controllers{
+    position: absolute;
+    top: 10px;
+    right: 90px;
+    bottom: 10px;
+    z-index: 1;
+
+  }
+
 }

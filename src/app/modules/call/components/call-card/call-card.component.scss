@@ -1,0 +1,81 @@
+@use "variables" as vars;
+
+
+.favorite-card,
+.contacts-card,
+.recent-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  background: vars.$basic-grey;
+  transition: background 0.2s;
+
+  &:hover {
+    background: vars.$higlighted-blue;
+    cursor: pointer;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 16px;
+    }
+
+    .labels {
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+      }
+      .subhead {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 300;
+        margin-top: 2px;
+
+      }
+    }
+  }
+
+  .right {
+    color: vars.$icon-color;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+  }
+}
+
+
+.initals-circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: vars.$icon-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-right: 16px;
+  color: white;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+
+}

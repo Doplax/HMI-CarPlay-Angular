@@ -3,7 +3,7 @@ import mapboxgl, { LngLat, Map } from 'mapbox-gl'; // <-- use mapboxgl import
 import { environment } from '@environments/environment';
 
 @Component({
-    selector: 'app-maps-page',
+    selector: 'maps-page',
     templateUrl: './maps-page.component.html',
     styleUrls: ['./maps-page.component.scss'],
     standalone: false

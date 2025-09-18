@@ -10,6 +10,7 @@ import { CallLayoutPageComponent } from './pages/call-layout-page/call-layout-pa
 const routes: Routes = [
   { path: '', component: CallLayoutPageComponent,
     children: [
+      {path: '', redirectTo: 'favorites', pathMatch: 'full' }, // <-- Redirects /call to /call/favorites
       {path: 'favorites', component: CallFavoritesPageComponent},
       {path: 'recents', component: CallRecentsPageComponent},
       {path: 'contacts', component: CallContactsPageComponent},

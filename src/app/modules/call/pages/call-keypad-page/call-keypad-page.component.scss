@@ -1,36 +1,92 @@
-/* numeric-keypad.component.css */
+@use "variables" as vars;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.number-container {
+  min-height: 40px;
+  display: flex;
+
+
+  .dialed-number {
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+  }
+
+  .backspace-btn {
+    width: 50px;
+    background-color: vars.$background-color;
+    margin-left: 20px;
+    img {
+      width: 50px;
+    }
+  }
+}
+
 .keypad-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 200px;
+  width: 300px;
   margin: auto;
   padding: 20px;
-  border-radius: 10px
-}
+  border-radius: 10px;
 
-.key {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: #4c4c4c;
-  border-radius: 50%;
-  color: white;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-}
+  .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: vars.$basic-grey;
+    border-radius: 50%;
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
 
-.key.highlighted {
-  background-color: #5cc7ff;
-}
+    &:hover {
+      background-color: vars.$higlighted-blue;
+    }
 
-.key-number {
-  font-size: 24px;
-}
+    &:active {
+      background-color: vars.$icon-color;
 
-.key-letters {
-  font-size: 12px;
+
+    }
+
+    .key-number {
+      font-size: 24px;
+    }
+
+    .key-letters {
+      font-size: 12px;
+    }
+  }
+
+  button.call-btn {
+    position: absolute;
+    background-color: #15dd33;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    bottom: 20px;
+    right: -130px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    img {
+      width: 35px;
+    }
+  }
 }

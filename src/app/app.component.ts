@@ -1,6 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CurrentStateService } from "@shared/services/current-state.service";
 import { Subscription } from 'rxjs';
+import { FontAwesomeIconsService } from './shared/services/fontAwesomeIcons.service';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -11,7 +13,10 @@ export class AppComponent implements OnDestroy {
   public isRunning: boolean = true;
   private subscriptions: Subscription = new Subscription();
 
-  constructor(private currentStateService: CurrentStateService) {
+  constructor(
+    private fontAwesomeIconsService: FontAwesomeIconsService,  // Injected for side effects: icon registration at app startup
+    private currentStateService: CurrentStateService,
+  ) {
     this.subscriptions.add(
       this.currentStateService.getRunningState().subscribe(status => {
         this.isRunning = status;
