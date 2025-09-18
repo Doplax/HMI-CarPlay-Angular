@@ -1,0 +1,18 @@
+
+@use "variables" as vars;
+
+.maps-navigation-controllers {
+  position: absolute;
+  background-color: vars.$background-color;
+  height: 100%;
+
+  .top-container,
+  .bottom-container{
+    height: 100px;
+    width: 50px;
+    > div {
+      color: vars.$higlighted-blue;
+
+    }
+  }
+}

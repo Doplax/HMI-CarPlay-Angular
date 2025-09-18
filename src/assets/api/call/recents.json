@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Olivia Williams",
+    "time": "07:45",
+    "favorite": true,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "John Smith",
+    "time": "08:20",
+    "favorite": true,
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Isabella Rodriguez",
+    "time": "12:45",
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Amelia Scott",
+    "time": "14:50",
+    "favorite": false,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Grace Moore",
+    "time": "15:30",
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Harper King",
+    "time": "yesterday",
+    "favorite": false,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Jack Baker",
+    "time": "yesterday",
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Ella Green",
+    "time": "yesterday",
+    "favorite": true,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Samuel Carter",
+    "time": "yesterday",
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Chloe Evans",
+    "time": "yesterday",
+    "favorite": false,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Matthew Nelson",
+    "time": "a week ago",
+    "favorite": true,
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Scarlett Hall",
+    "time": "a week ago",
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Victoria Perez",
+    "time": "a week ago",
+    "favorite": false,
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Liam Foster",
+    "time": "a month ago",
+    "favorite": true,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Mason Reed",
+    "time": "a month ago",
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Abigail Rivera",
+    "time": "a month ago",
+    "favorite": false,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Evelyn Cooper",
+    "time": "a month ago",
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Logan Murphy",
+    "time": "a month ago",
+    "favorite": true,
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Zoey Bailey",
+    "time": "a month ago",
+    "favorite": false,
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Alexander Morris",
+    "time": "a month ago",
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Mila Kim",
+    "time": "a month ago",
+    "favorite": true,
+    "deviceType": "mobile"
+  },
+  {
+    "name": "Sebastian Brooks",
+    "time": "a month ago",
+    "deviceType": "desktop"
+  },
+  {
+    "name": "Layla Ramirez",
+    "time": "a month ago",
+    "favorite": false,
+    "deviceType": "mobile"
+  }
+]

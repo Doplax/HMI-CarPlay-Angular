@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapsPageComponent } from './pages/maps-page/maps-page.component';
 import { MapsRoutingModule } from './maps-routing.module';
+import { MapsNavigationControllersComponent } from './components/maps-navigation-controllers/maps-navigation-controllers.component';
+import { MapsSearchBoxComponent } from './components/maps-search-box/maps-search-box.component';
 
-//MapBox GL
-//import mapboxgl from 'mapbox-gl';
-//import { environment } from '@environments/environment';
-//mapboxgl.accessToken = environment.mapbox_key;
 
 @NgModule({
   declarations: [
-    MapsPageComponent
+    MapsPageComponent,
+    MapsNavigationControllersComponent,
+    MapsSearchBoxComponent
   ],
   imports: [
     CommonModule,

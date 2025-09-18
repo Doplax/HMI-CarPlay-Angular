@@ -1,1 +1,28 @@
-<p>call-voicemal works!</p>
+<main class="call-voicemail-page">
+
+  <div class="voice-container">
+    <h1>Buzón de voz</h1>
+    <p>Llamando...</p>
+  </div>
+
+  <div class="image-wrapper">
+    <div class="item-container">
+      <fa-icon class="phone-icon" [icon]="['fas','phone']"/>
+      <span>Finalizar</span>
+    </div>
+    <div class="item-container">
+      <fa-icon [icon]="['fas','microphone-slash']"/>
+      <span>Silencio</span>
+    </div>
+    <div class="item-container">
+      <!-- TODO: Cambiar icono -->
+      <fa-icon [icon]="['fas','microphone-slash']"/>
+      <span>Teclado</span>
+    </div>
+    <div class="item-container">
+      <fa-icon [icon]="['fas','plus']"/>
+      <span>Añadir Llamada</span>
+    </div>
+  </div>
+
+</main>

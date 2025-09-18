@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 @import url(./styles/fonts.scss);
 
 * {
@@ -6,6 +8,22 @@
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
+
+  // GLOBAL SCROLLBAR STYLES <--
+  &::-webkit-scrollbar {
+    width: 12px;
+    background: vars.$background-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: vars.$basic-grey;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: vars.$background-color;
+  }
+
+  scrollbar-color: vars.$basic-grey vars.$background-color;
+  scrollbar-width: thin;
 }
 
 body {
@@ -16,4 +34,9 @@ body {
     width: 100%;
     height: 100%;
   }
+}
+
+button {
+  outline: none;
+  border: none;
 }

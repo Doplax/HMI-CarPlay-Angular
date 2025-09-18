@@ -1,8 +1,26 @@
+<div class="number-container">
+  <span class="dialed-number">
+    {{dialedNumber}}
+  </span>
+  @if(dialedNumber.length > 0){
+    <button class="backspace-btn" (click)="clearDialedNumber()">
+      <img src="assets/svg/call/backspace.svg" alt="backspace button">
+    </button>
+
+  }
+</div>
+
 <div class="keypad-container">
   @for (key of keys; track key) {
-    <div class="key" [ngClass]="{'highlighted': key.highlighted}">
+    <div
+      class="key"
+      tabindex="0"
+      (click)="addDigit(key.number)">
       <div class="key-number">{{ key.number }}</div>
       <div class="key-letters">{{ key.letters }}</div>
     </div>
   }
+  <button class="call-btn">
+    <img src="assets/svg/call/call.svg" alt="call button">
+  </button>
 </div>

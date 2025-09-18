@@ -1,1 +1,5 @@
-<p>call-recents works!</p>
+<main>
+  @for (item of callData; track $index) {
+    <call-card [callData]="item" [CardType]="CardTypeEnum.recents"/>
+  }
+</main>

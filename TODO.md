@@ -1,3 +1,10 @@
+# Call
+[] Maquetar Recents Correctamente
+[] Maquetar Contacts con el separador por cada letra y el menu lateral
+[] Revisar Keypad
+[] Servicio para simular llamada
+[] voicemail recibir los datos del servicio
+
 
 [] From icon.service I am loading the icons from app.component but in the side-bar I load them directly:
   - Do I really need this service?
