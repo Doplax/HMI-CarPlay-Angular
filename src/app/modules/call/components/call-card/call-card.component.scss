@@ -1,5 +1,8 @@
 @use "variables" as vars;
 
+
+.favorite-card,
+.contacts-card,
 .recent-card {
   display: flex;
   flex-direction: row;
@@ -33,11 +36,12 @@
       .header {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #fff;
+        color: white;
       }
       .subhead {
         font-size: 1.1rem;
-        color: #bdbdbd;
+        color: white;
+        font-weight: 300;
         margin-top: 2px;
 
       }
@@ -45,8 +49,33 @@
   }
 
   .right {
-    color: #bdbdbd;
-    font-size: 1.2rem;
-
+    color: vars.$icon-color;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
   }
+}
+
+
+.initals-circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: vars.$icon-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-right: 16px;
+  color: white;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+
 }

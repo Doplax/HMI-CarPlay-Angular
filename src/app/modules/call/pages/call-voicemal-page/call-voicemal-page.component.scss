@@ -1,3 +1,4 @@
+@use "variables" as vars;
 
 .call-voicemail-page {
   height: 100%;
@@ -31,13 +32,6 @@
       align-items: center;
       cursor: pointer;
 
-      > img{
-        background-color: yellow;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-
       > span {
         color: aliceblue;
         margin-top: 10px;
@@ -54,3 +48,27 @@
   }
 
 }
+
+::ng-deep fa-icon{
+  background-color: vars.$icon-color;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+
+
+  &.phone-icon {
+    background-color: red;
+    color: white;
+    transform: rotate(135deg);
+    font-size: 24px;
+  }
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
+

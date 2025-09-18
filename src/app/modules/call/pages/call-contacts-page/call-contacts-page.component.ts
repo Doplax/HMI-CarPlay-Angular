@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CallService } from '@modules/call/services/call.service';
-import { CardType } from '@modules/call/types/call.type';
-
+import { CardTypeEnum } from '@modules/call/types/call.type';
 @Component({
   selector: 'call-contacts-page',
   templateUrl: './call-contacts-page.component.html',
@@ -9,19 +8,35 @@ import { CardType } from '@modules/call/types/call.type';
   standalone: false
 })
 export class CallContactsPageComponent {
-    public CardTypeEnum = CardType;
+  public CardTypeEnumEnum = CardTypeEnum;
 
-    callData:any[] = [];
+  callData: any[] = [];
+  groupedContacts: { [key: string]: any[] } = {};
 
-    constructor(
-      public callService:CallService,
-    ) { }
+  constructor(public callService: CallService) {}
 
+  ngOnInit(): void {
+    this.callService.getContactsList().subscribe((data) => {
+      this.callData = data;
+      this.groupContacts();
+      console.log(this.groupedContacts);
+    });
+  }
 
-    ngOnInit(): void {
-      this.callService.getRecentCalls().subscribe((data) => {
-        this.callData = data;
-        console.log(data);
-      });
+  groupContacts(): void {
+    this.groupedContacts = {};
+    for (const contact of this.callData) {
+      const firstLetter = contact.name[0].toUpperCase();
+      if (!this.groupedContacts[firstLetter]) {
+        this.groupedContacts[firstLetter] = [];
+
+      }
+      this.groupedContacts[firstLetter].push(contact);
+
     }
+  }
+
+  getKeys(obj: Object): string[] {
+    return Object.keys(obj);
+  }
 }

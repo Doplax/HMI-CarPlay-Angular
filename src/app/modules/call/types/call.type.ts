@@ -1,13 +1,17 @@
-export enum CardType {
+export enum CardTypeEnum {
   'favorites',
   'recents',
   'contacts',
 }
 
+export type DeviceType = 'desktop' | 'mobile';
 
-export interface CallCardData {
+export interface CallContactData {
   name: string;
-  time: string; // hora 00:00
-  favorite?: boolean;
-  deviceType?: 'mobile' | 'desktop';
+  time?:string,
+  phoneNumber?: string;
+  isFavorite?: boolean;
+  deviceType?: DeviceType;
+  image?: string;
 }
+

@@ -7,26 +7,5 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class CallVoicemalPageComponent {
-  icons = [
-    {
-      image: 'assets/images/icons/missed-call.svg',
-      title: 'Finalizar',
-      class: ''
-    },
-    {
-      image: 'assets/images/icons/missed-call.svg',
-      title: 'Silencio',
-      class: ''
-    },
-    {
-      image: 'assets/images/icons/missed-call.svg',
-      title: 'Teclado',
-      class: ''
-    },
-    {
-      image: 'assets/images/icons/missed-call.svg',
-      title: 'Añadir Llamada',
-      class: ''
-    },
-  ]
+
 }

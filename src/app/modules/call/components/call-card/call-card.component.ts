@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CallCardData, CardType } from '@src/app/modules/call/types/call.type';
+import { CallContactData, CardTypeEnum } from '@src/app/modules/call/types/call.type';
 import { CallService } from '../../services/call.service';
 
 
@@ -10,10 +10,10 @@ import { CallService } from '../../services/call.service';
   standalone: false
 })
 export class CallCardComponent {
-  public CardTypeEnum = CardType;
+  public CardTypeEnum = CardTypeEnum;
 
-  @Input() callData: CallCardData = { name: '', time: '', deviceType: 'desktop'};
-  @Input() CardType: CardType = this.CardTypeEnum.favorites;
+  @Input({required: true}) callData!: CallContactData;
+  @Input({required: true}) CardType!: CardTypeEnum;
 
   constructor(
     public callService:CallService,
@@ -21,6 +21,15 @@ export class CallCardComponent {
 
   callTo(contact:any){
     this.callService.callTo(contact);
+  }
+
+  getInitaials(name: string) {
+    const names = name.split(' ');
+    let initials = names[0].charAt(0).toUpperCase();
+    if (names.length > 1) {
+      initials += names[names.length - 1].charAt(0).toUpperCase();
+    }
+    return initials;
   }
 
 }

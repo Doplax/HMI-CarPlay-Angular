@@ -10,5 +10,7 @@ import icons  from '@src/assets/svg/call-top-bar/index.json';
 })
 export class CallTopBarComponent {
   iconList = icons;  // TODO: destructuring in a better way?
+  hovered: string | null = null;
+
 
 }

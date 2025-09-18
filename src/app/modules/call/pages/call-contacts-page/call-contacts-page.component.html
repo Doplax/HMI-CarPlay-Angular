@@ -1,5 +1,10 @@
 <main>
-  @for (item of callData; track $index) {
-    <call-card [callData]="item" [CardType]="CardTypeEnum.contacts"/>
+  @for (letter of getKeys(groupedContacts).sort(); track $index) {
+    <section>
+      <h2 class="letter">{{ letter }}</h2>
+      @for (contact of groupedContacts[letter]; track $index) {
+        <call-card [callData]="contact" [CardType]="CardTypeEnumEnum.contacts"/>
+      }
+    </section>
   }
 </main>

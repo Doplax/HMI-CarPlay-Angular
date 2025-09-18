@@ -14,11 +14,18 @@ nav {
 
       img {
         height: 70px;
-        &:hover {
-          background-color: vars.$higlighted-blue;
-          border-radius: 10px;
-        }
+        //&:hover {
+        //  background-color: vars.$higlighted-blue;
+        //  border-radius: 10px;
+        //}
       }
     }
+  }
+}
+
+
+.active{
+  > img{
+    fill: red;
   }
 }

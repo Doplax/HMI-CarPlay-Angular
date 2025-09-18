@@ -1,28 +1,94 @@
 <nav>
   <ul>
-    <!-- Favorites -->
-    <li routerLink="favorites">
-      <img [src]="iconList.top_bar_favorites_static" alt="Favorites page" />
+    <li
+      routerLink="favorites"
+      [routerLinkActive]="['active']"
+      #rlaFav="routerLinkActive"
+      (mouseenter)="hovered = 'favorites'"
+      (mouseleave)="hovered = null"
+    >
+      <img
+        [src]="
+          hovered === 'favorites'
+            ? iconList.top_bar_favorites_highlighted
+            : rlaFav.isActive
+              ? iconList.top_bar_favorites_selected
+              : iconList.top_bar_favorites_static
+        "
+        alt="Favorites page"
+      />
     </li>
-
-    <!-- Recents -->
-    <li routerLink="recents">
-      <img [src]="iconList.top_bar_recents_static" alt="Recents Page" />
+    <li
+      routerLink="recents"
+      [routerLinkActive]="['active']"
+      #rlaRec="routerLinkActive"
+      (mouseenter)="hovered = 'recents'"
+      (mouseleave)="hovered = null"
+    >
+      <img
+        [src]="
+          hovered === 'recents'
+            ? iconList.top_bar_recents_highlighted
+            : rlaRec.isActive
+              ? iconList.top_bar_recents_selected
+              : iconList.top_bar_recents_static
+        "
+        alt="Recents Page"
+      />
     </li>
-
-    <!-- Contacts -->
-    <li routerLink="contacts">
-      <img [src]="iconList.top_bar_contacts_static" alt="Contacts Page" />
+    <li
+      routerLink="contacts"
+      [routerLinkActive]="['active']"
+      #rlaCon="routerLinkActive"
+      (mouseenter)="hovered = 'contacts'"
+      (mouseleave)="hovered = null"
+    >
+      <img
+        [src]="
+          hovered === 'contacts'
+            ? iconList.top_bar_contacts_highlighted
+            : rlaCon.isActive
+              ? iconList.top_bar_contacts_selected
+              : iconList.top_bar_contacts_static
+        "
+        alt="Contacts Page"
+      />
     </li>
-
-    <!-- KayPad -->
-    <li routerLink="keypad">
-      <img [src]="iconList.top_bar_keypad_static" alt="KayPad Page" />
+    <li
+      routerLink="keypad"
+      [routerLinkActive]="['active']"
+      #rlaKey="routerLinkActive"
+      (mouseenter)="hovered = 'keypad'"
+      (mouseleave)="hovered = null"
+    >
+      <img
+        [src]="
+          hovered === 'keypad'
+            ? iconList.top_bar_keypad_highlighted
+            : rlaKey.isActive
+              ? iconList.top_bar_keypad_selected
+              : iconList.top_bar_keypad_static
+        "
+        alt="KeyPad Page"
+      />
     </li>
-
-    <!-- Power Off -->
-    <li routerLink="voicemail">
-      <img [src]="iconList.top_bar_voicemail_static" alt="Voicemail Page" />
+    <li
+      routerLink="voicemail"
+      [routerLinkActive]="['active']"
+      #rlaVm="routerLinkActive"
+      (mouseenter)="hovered = 'voicemail'"
+      (mouseleave)="hovered = null"
+    >
+      <img
+        [src]="
+          hovered === 'voicemail'
+            ? iconList.top_bar_voicemail_highlighted
+            : rlaVm.isActive
+              ? iconList.top_bar_voicemail_selected
+              : iconList.top_bar_voicemail_static
+        "
+        alt="Voicemail Page"
+      />
     </li>
   </ul>
 </nav>

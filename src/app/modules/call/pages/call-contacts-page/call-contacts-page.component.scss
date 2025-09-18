@@ -1,3 +1,4 @@
+
 :host {
   display: block;
   overflow: scroll;
@@ -6,4 +7,16 @@
 
 main {
   padding: 20px;
+
+  section{
+    margin-bottom: 25px;
+
+    .letter{
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      padding-left: 15px;
+    }
+  }
 }
+

@@ -8,23 +8,23 @@
   height: 100%;
 }
 
-
-.number-container{
+.number-container {
   min-height: 40px;
+  display: flex;
 
-  .dialed-number{
+
+  .dialed-number {
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 500;
   }
 
-
   .backspace-btn {
-    width: 30px;
+    width: 50px;
     background-color: vars.$background-color;
+    margin-left: 20px;
     img {
-      fill: #32d74b;
-      color: red;
+      width: 50px;
     }
   }
 }
@@ -34,57 +34,59 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 200px;
+  width: 300px;
   margin: auto;
   padding: 20px;
-  border-radius: 10px
-}
+  border-radius: 10px;
 
-.key {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: vars.$basic-grey;
-  border-radius: 50%;
-  color: white;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
+  .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: vars.$basic-grey;
+    border-radius: 50%;
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
 
-  &:focus {
-    background-color: vars.$higlighted-blue;
-  }
-}
+    &:hover {
+      background-color: vars.$higlighted-blue;
+    }
 
-
-
-.key-number {
-  font-size: 24px;
-}
-
-.key-letters {
-  font-size: 12px;
-}
+    &:active {
+      background-color: vars.$icon-color;
 
 
-button.call-btn{
-  position: absolute;
-  background-color: #32d74b;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  bottom: 20px;
-  right: -100px;
-  cursor: pointer;
+    }
 
-  &:hover {
-    filter: brightness(0.9);
+    .key-number {
+      font-size: 24px;
+    }
+
+    .key-letters {
+      font-size: 12px;
+    }
   }
 
-  img {
-    width: 30px;
-  }
+  button.call-btn {
+    position: absolute;
+    background-color: #15dd33;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    bottom: 20px;
+    right: -130px;
+    cursor: pointer;
 
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    img {
+      width: 35px;
+    }
+  }
 }

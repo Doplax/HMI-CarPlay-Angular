@@ -1,3 +1,7 @@
 <main class="call-favorites-page">
-  <p>No Favorites</p>
+  <!--<p>No Favorites</p>-->
+
+    @for (contact of favContactsList; track $index) {
+      <call-card [callData]="contact" [CardType]="CardTypeEnum.favorites"/>
+    }
 </main>

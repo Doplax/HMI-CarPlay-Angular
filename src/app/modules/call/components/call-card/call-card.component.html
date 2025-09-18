@@ -1,37 +1,59 @@
 @switch (CardType) {
-  @case (CardTypeEnum.contacts) {
-    <div (click)="callTo(callData)" class="recent-card">
-      <div class="left">
-        <div class="labels">
-          <div class="header">{{callData.name}}</div>
-        </div>
-      </div>
-    </div>
-  }
-
   @case (CardTypeEnum.favorites) {
-    <div (click)="callTo(callData)" class="recent-card">
+    <div (click)="callTo(callData)" class="favorite-card">
       <div class="left">
-        <span class="icon">📞</span>
+        <!-- Image -->
+        @if(callData.image){
+          <div class="profile-image">
+            <img [src]="callData.image" alt="{{callData.name}}" />
+          </div>
+        } @else {
+        <div class="initals-circle">
+          {{getInitaials(callData.name)}}
+        </div>
+        }
+
+        <!-- Label -->
         <div class="labels">
           <div class="header">{{callData.name}}</div>
-          <!--<div class="subhead">{{CardType}}</div>-->
         </div>
       </div>
-      <div class="right">{{callData.time}}</div>
+      <div class="right">{{callData.deviceType}}</div>
     </div>
   }
 
   @case (CardTypeEnum.recents) {
     <div (click)="callTo(callData)" class="recent-card">
       <div class="left">
-        <span class="icon">📞</span>
+        <!-- Image -->
+        @if(callData.image){
+          <div class="profile-image">
+            <img [src]="callData.image" alt="{{callData.name}}" />
+          </div>
+        } @else {
+          <div class="initals-circle">
+            {{getInitaials(callData.name)}}
+          </div>
+        }
+
+        <!-- Label -->
         <div class="labels">
           <div class="header">{{callData.name}}</div>
           <div class="subhead">{{callData.deviceType}}</div>
         </div>
       </div>
       <div class="right">{{callData.time}}</div>
+    </div>
+  }
+
+  @case (CardTypeEnum.contacts) {
+    <div (click)="callTo(callData)" class="contacts-card">
+      <div class="left">
+        <div class="labels">
+          <div class="header">{{callData.name}}</div>
+        </div>
+      </div>
+      <!--<div class="right">{{callData.time}}</div>-->
     </div>
   }
 }
