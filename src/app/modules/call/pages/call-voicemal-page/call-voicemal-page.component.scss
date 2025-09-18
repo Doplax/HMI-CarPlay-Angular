@@ -1,0 +1,56 @@
+
+.call-voicemail-page {
+  height: 100%;
+
+  .voice-container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > h1 {
+      color: aliceblue;
+      font-weight: 600;
+    }
+
+    > p {
+      color: #ccc;
+    }
+
+  }
+
+  .image-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+
+    .item-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      > img{
+        background-color: yellow;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      > span {
+        color: aliceblue;
+        margin-top: 10px;
+        font-weight: 400;
+
+      }
+
+
+      &.red{
+        background-color: red;
+      }
+
+    }
+  }
+
+}

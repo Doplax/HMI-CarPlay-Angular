@@ -16,4 +16,13 @@ export class CallService {
     return this.http.get<CallCardData[]>('/assets/api/call/recents.json');
   }
 
+  getContactsList(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/api/call/contacts.json');
+  }
+
+  callTo(contact:any){
+    console.log('Calling to', contact);
+
+  }
+
 }

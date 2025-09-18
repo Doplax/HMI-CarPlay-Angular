@@ -1,1 +1,17 @@
-<p>call-voicemal works!</p>
+<main class="call-voicemail-page">
+
+  <div class="voice-container">
+    <h1>Buzón de voz</h1>
+    <p>Llamando...</p>
+  </div>
+
+  <div class="image-wrapper">
+    @for(icon of icons; track $index){
+      <div class="item-container" [ngClass]="icon.class">
+        <img [src]="icon.image" [alt]="icon.title"/>
+        <span>{{icon.title}}</span>
+      </div>
+    }
+  </div>
+
+</main>
