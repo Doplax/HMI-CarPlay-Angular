@@ -18,4 +18,4 @@ export const environment = {
 mkdirSync('./src/environments', { recursive: true });
 writeFileSync(targetPath, envFileContent);
 
-console.log("environment.ts content:", envFileContent);
+console.log("environment.ts content:", envFileContent); 
