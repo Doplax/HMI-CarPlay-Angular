@@ -1,9 +1,11 @@
 <!-- TODO: Fix Clickable Zone-->
 <div class="container">
   @for (icon of iconsList; track icon) {
-    <div class="icon-container" [routerLink]="icon.route">
-      <img [src]="icon.path" [alt]="icon.name" />
-      <div class="icon-name">{{ icon.name }}</div>
+    <div class="icon-box" [routerLink]="icon.route">
+      <div class="icon-content">
+        <img [src]="icon.path" [alt]="icon.name" />
+        <div class="icon-name">{{ icon.name }}</div>
+      </div>
     </div>
   }
 </div>

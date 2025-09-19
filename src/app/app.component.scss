@@ -36,7 +36,28 @@
     background-size: 100% 100%; /* Ajusta la imagen para que se deforme y cubra todo el contenedor */
   }
 
+  footer {
+    position: absolute;
+    color: white;
+    z-index: 20;
+    bottom: 115px;
 
+    > p {
+      font-weight: 400;
+      font-size: 16px;
+
+      > .doplax-link {
+        color: orange;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+          color: darkorange;
+        }
+      }
+    }
+  }
 }
 
 

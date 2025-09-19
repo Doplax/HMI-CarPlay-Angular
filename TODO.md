@@ -2,6 +2,11 @@
 [] Servicio para simular llamada
 [] voicemail recibir los datos del servicio
 
+# Home 
+[] Hover en los iconos para que parezca vivo
+[] Mover lo que pueda de app a home
+
+
 
 [] From icon.service I am loading the icons from app.component but in the side-bar I load them directly:
   - Do I really need this service?
