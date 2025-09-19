@@ -6,10 +6,15 @@ import {
   faPhone,
   faMicrophoneSlash,
   faPlus,
+  faVolumeHigh,
+  faVolumeDown,
+  faHome,
+  faEnvelope,
+  faPowerOff,
   faMinus,
   faLocationArrow,
   faTriangleExclamation,
-  faArrowsUpDownLeftRight
+  faArrowsUpDownLeftRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
@@ -18,10 +23,15 @@ const icons = [
   faPhone,
   faMicrophoneSlash,
   faPlus,
+  faVolumeHigh,
+  faVolumeDown,
+  faHome,
+  faEnvelope,
+  faPowerOff,
   faMinus,
   faLocationArrow,
   faTriangleExclamation,
-  faArrowsUpDownLeftRight
+  faArrowsUpDownLeftRight,
 ];
 
 @Injectable({
@@ -32,3 +42,6 @@ export class FontAwesomeIconsService {
     library.addIcons(...icons);
   }
 }
+
+//?HTML Exapmle
+//<fa-icon [icon]="['fas','microphone-slash']"/>

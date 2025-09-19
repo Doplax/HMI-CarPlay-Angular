@@ -1,9 +1,11 @@
 # Call
-[] Maquetar Recents Correctamente
-[] Maquetar Contacts con el separador por cada letra y el menu lateral
-[] Revisar Keypad
 [] Servicio para simular llamada
 [] voicemail recibir los datos del servicio
+
+# Home 
+[] Hover en los iconos para que parezca vivo
+[] Mover lo que pueda de app a home
+
 
 
 [] From icon.service I am loading the icons from app.component but in the side-bar I load them directly:

@@ -1,4 +1,4 @@
-
+@use "variables" as vars;
 
 ul {
   height: 100%;
@@ -10,9 +10,15 @@ ul {
 li {
   list-style: none;
   cursor: pointer;
+  fa-icon ::ng-deep {
+    color: white;
+    font-size: 40px;
+
+    &:hover {
+      color: vars.$icon-color;
+    }
+  }
 }
 
-img {
-  width: 50px;
-}
+
 

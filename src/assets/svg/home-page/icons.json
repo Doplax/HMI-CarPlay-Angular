@@ -3,12 +3,12 @@
     {
       "name": "Books",
       "path": "assets/svg/home-page/books.svg",
-      "route": "#"
+      "route": "books"
     },
     {
       "name": "Calendar",
       "path": "assets/svg/home-page/calendar.svg",
-      "route": "#"
+      "route": "calendar"
     },
     {
       "name": "Call",
@@ -24,22 +24,22 @@
     {
       "name": "Messages",
       "path": "assets/svg/home-page/messages.svg",
-      "route": "#"
+      "route": "messages"
     },
     {
       "name": "Music",
       "path": "assets/svg/home-page/music.svg",
-      "route": "#"
-    },
-    {
-      "name": "Nose",
-      "path": "assets/svg/home-page/nose.svg",
-      "route": "#"
+      "route": "music"
     },
     {
       "name": "Podcast",
       "path": "assets/svg/home-page/podcast.svg",
-      "route": "#"
+      "route": "podcast"
+    },
+    {
+      "name": "Settings",
+      "path": "assets/svg/home-page/settings.svg",
+      "route": "settings"
     }
   ]
 }

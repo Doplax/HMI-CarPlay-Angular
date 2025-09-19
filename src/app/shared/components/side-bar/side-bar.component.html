@@ -1,28 +1,30 @@
 <nav>
   <ul>
-    <!-- Flag -->
+    <!-- Message -->
     <li>
-      <img [src]="inconList.flag" alt="Flag Icon" />
+      <a href="mailto:doplax.labs@gmail.com">
+        <fa-icon [icon]="['fas','envelope']" title="Send me a message"/>
+      </a>
     </li>
 
     <!-- Home -->
     <li (click)="navigateToHome()">
-      <img [src]="inconList.home" alt="Home Icon" />
+      <fa-icon [icon]="['fas','home']" title="Go Home"/>
     </li>
 
     <!-- Volume Up -->
     <li (click)="volumeService.changeVolume(true)">
-      <img [src]="inconList.volumeUp" alt="Volume Up Icon" />
+      <fa-icon [icon]="['fas','volume-up']" title="Volume Up"/>
     </li>
 
     <!-- Volume Down -->
     <li (click)="volumeService.changeVolume(false)">
-      <img [src]="inconList.volumeDown" alt="Volume Down Icon" />
+      <fa-icon [icon]="['fas','volume-down']" title="Volume Down"/>
     </li>
 
     <!-- Power Off -->
     <li (click)="currentState.switchRunningState()">
-      <img [src]="inconList.powerOff" alt="Power Off Icon" />
+      <fa-icon [icon]="['fas','power-off']" title="Power Off"/>
     </li>
   </ul>
 </nav>

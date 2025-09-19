@@ -9,6 +9,16 @@ const routes: Routes = [
       import('@modules/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'books',
+    loadChildren: () =>
+      import('@modules/books/books.module').then((m) => m.BooksModule),
+  },
+  {
+    path: 'calendar',
+    loadChildren: () =>
+      import('@modules/calendar/calendar.module').then((m) => m.CalendarModule),
+  },
+  {
     path: 'call',
     loadChildren: () =>
       import('@modules/call/call.module').then((m) => m.CallModule),
@@ -17,6 +27,26 @@ const routes: Routes = [
     path: 'maps',
     loadChildren: () =>
       import('@modules/maps/maps.module').then((m) => m.MapsModule),
+  },
+  {
+    path: 'messages',
+    loadChildren: () =>
+      import('@modules/messages/messages.module').then((m) => m.MessagesModule),
+  },
+  {
+    path: 'music',
+    loadChildren: () =>
+      import('@modules/music/music.module').then((m) => m.MusicModule),
+  },
+  {
+    path: 'settings',
+    loadChildren: () =>
+      import('@modules/settings/settings.module').then((m) => m.SettingsModule),
+  },
+  {
+    path: 'podcast',
+    loadChildren: () =>
+      import('@modules/podcast/podcast.module').then((m) => m.PodcastModule),
   },
 ];
 

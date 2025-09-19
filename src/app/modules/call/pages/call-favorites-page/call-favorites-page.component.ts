@@ -21,7 +21,6 @@ export class CallFavoritesPageComponent {
     ngOnInit(): void {
       this.callService.getContactsList().subscribe((data) => {
         this.favContactsList = data.filter(contact => contact.isFavorite === true);
-        console.log(this.favContactsList);
       });
     }
 }
