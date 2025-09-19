@@ -1,0 +1,44 @@
+@use 'variables' as vars;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: vars.$background-color;
+}
+
+
+.books-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+
+  h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  .books-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}

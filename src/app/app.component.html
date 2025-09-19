@@ -1,20 +1,18 @@
 <main class="display">
   <img src="../assets/img/carInterfaceBg.png" alt="background" />
+
   <div class="main">
     <!-- Nav Bar -->
     <app-side-bar class="nav" />
 
     <!-- Content -->
-    @if (isRunning) {
-      <div class="content">
-        <!-- Volume -->
-        <app-volume-box></app-volume-box>
-        <router-outlet></router-outlet>
-      </div>
-    } @else {
-      <app-lock-screen class="content"></app-lock-screen>
-    }
-
-    <!-- Lock Screen -->
+    <div class="content">
+      <app-volume-box/>
+      @if (isRunning) {
+        <router-outlet/>
+      } @else {
+        <app-lock-screen/>
+      }
+    </div>
   </div>
 </main>

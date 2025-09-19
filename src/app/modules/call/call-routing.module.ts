@@ -5,10 +5,10 @@ import { CallFavoritesPageComponent } from './pages/call-favorites-page/call-fav
 import { CallContactsPageComponent } from './pages/call-contacts-page/call-contacts-page.component';
 import { CallKeypadPageComponent } from './pages/call-keypad-page/call-keypad-page.component';
 import { CallVoicemalPageComponent } from './pages/call-voicemal-page/call-voicemal-page.component';
-import { CallLayoutPageComponent } from './pages/call-layout-page/call-layout-page.component';
+import { CallLayoutComponent } from './layout/call-layout.component';
 
 const routes: Routes = [
-  { path: '', component: CallLayoutPageComponent,
+  { path: '', component: CallLayoutComponent,
     children: [
       {path: '', redirectTo: 'favorites', pathMatch: 'full' }, // <-- Redirects /call to /call/favorites
       {path: 'favorites', component: CallFavoritesPageComponent},
