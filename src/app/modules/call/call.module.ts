@@ -11,7 +11,6 @@ import { CallVoicemalPageComponent } from './pages/call-voicemal-page/call-voice
 import { CallLayoutPageComponent } from './pages/call-layout-page/call-layout-page.component';
 import { CallFavoritesPageComponent  } from './pages/call-favorites-page/call-favorites-page.component';
 
-
 //Components
 import { CallTopBarComponent } from './components/call-top-bar/call-top-bar.component';
 import { CallCardComponent } from './components/call-card/call-card.component';

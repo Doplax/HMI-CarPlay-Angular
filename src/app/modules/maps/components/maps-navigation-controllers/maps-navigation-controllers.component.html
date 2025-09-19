@@ -1,20 +1,38 @@
 <div class="maps-navigation-controllers">
   <div class="top-container">
     <!-- Flecha -->
-     <div>ARROW</div>
-     <i class="material-symbols-outlined">
-      done_all
-      </i>
+     <div>
+       <fa-icon [icon]="['fas','location-arrow']"/>
+     </div>
+
     <!-- 3D -->
-     <div>3D</div>
+     <div class="button-3d">
+      <span>3D</span>
+     </div>
+  </div>
+
+  <div class="middle-container">
+    <div>
+      <fa-icon [icon]="['fas','triangle-exclamation']"/>
+    </div>
   </div>
 
 
   <div class="bottom-container">
     <!-- Arrows -->
+    <div>
+      <fa-icon [icon]="['fas','arrows-up-down-left-right']"/>
+    </div>
 
     <!-- Zoom In -->
+    <div>
+      <fa-icon [icon]="['fas','plus']"/>
+    </div>
+
     <!-- Zoom Out -->
+    <div>
+      <fa-icon [icon]="['fas','minus']"/>
+    </div>
   </div>
 
 

@@ -28,6 +28,5 @@ export class MapsPageComponent implements  AfterViewInit {
       center: this.currentLngLat,
       zoom: this.zoom
     });
-    //this.mapListeners();
   }
 }

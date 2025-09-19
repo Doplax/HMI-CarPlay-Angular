@@ -3,16 +3,59 @@
 
 .maps-navigation-controllers {
   position: absolute;
-  background-color: vars.$background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 
-  .top-container,
-  .bottom-container{
-    height: 100px;
-    width: 50px;
-    > div {
-      color: vars.$higlighted-blue;
 
+  //Common style
+  .top-container,
+  .middle-container,
+  .bottom-container{
+    > div {
+      background-color: vars.$background-color;
+      margin-top: 1px;
+      color: vars.$higlighted-blue;
+      min-height: 50px;
+      width: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      fa-icon{
+
+      }
+    }
+
+    div:first-child{
+      border-radius: 50px 50px 0 0 ;
+    }
+    div:last-child{
+      border-radius: 0 0 50px 50px ;
     }
   }
+
+  // Specific style
+
+  .middle-container{
+    div {
+      border-radius:50px !important;
+      height: 40px !important;
+    }
+
+  }
+}
+
+.button-3d {
+  > span {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+fa-icon ::ng-deep {
+  font-size: 20px;
 }
