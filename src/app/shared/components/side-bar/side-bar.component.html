@@ -1,12 +1,5 @@
 <nav>
   <ul>
-    <!-- Message -->
-    <li>
-      <a href="mailto:doplax.labs@gmail.com">
-        <fa-icon [icon]="['fas','envelope']" title="Send me a message"/>
-      </a>
-    </li>
-
     <!-- Home -->
     <li (click)="navigateToHome()">
       <fa-icon [icon]="['fas','home']" title="Go Home"/>
@@ -20,6 +13,13 @@
     <!-- Volume Down -->
     <li (click)="volumeService.changeVolume(false)">
       <fa-icon [icon]="['fas','volume-down']" title="Volume Down"/>
+    </li>
+
+    <!-- Message -->
+    <li>
+      <a href="mailto:doplax.labs@gmail.com">
+        <fa-icon [icon]="['fas','envelope']" title="Send me a message"/>
+      </a>
     </li>
 
     <!-- Power Off -->

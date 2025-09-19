@@ -46,29 +46,29 @@
 
     }
   }
-
-}
-
-::ng-deep fa-icon{
-  background-color: vars.$icon-color;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-
-
-  &.phone-icon {
-    background-color: red;
-    color: white;
-    transform: rotate(135deg);
+  ::ng-deep fa-icon{
+    background-color: vars.$icon-color;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
+
+
+    &.phone-icon {
+      background-color: red;
+      color: white;
+      transform: rotate(135deg);
+      font-size: 24px;
+    }
+
+    &:hover {
+      filter: brightness(0.7);
+    }
   }
 
-  &:hover {
-    filter: brightness(0.7);
-  }
 }
+
 

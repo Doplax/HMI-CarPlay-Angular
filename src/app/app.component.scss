@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 .display {
   height: 100vh;
   width: 100vw;
@@ -47,13 +49,13 @@
       font-size: 16px;
 
       > .doplax-link {
-        color: orange;
+        color: vars.$higlighted-blue;
         text-decoration: none;
         font-weight: 500;
         transition: color 0.2s;
 
         &:hover {
-          color: darkorange;
+          filter: brightness(0.8);
         }
       }
     }

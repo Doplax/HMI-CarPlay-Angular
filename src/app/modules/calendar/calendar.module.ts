@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 import { CalendarLayoutComponent } from './layout/calendar-layout.component';
 import { CalendarRoutingModule } from './calendar-routing.module';
+import { CalendarPreviousViewDirective, CalendarTodayDirective, CalendarNextViewDirective, CalendarMonthViewComponent, CalendarWeekViewComponent, CalendarDayViewComponent, CalendarDatePipe, DateAdapter, provideCalendar } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 
 @NgModule({
@@ -12,7 +14,13 @@ import { CalendarRoutingModule } from './calendar-routing.module';
   ],
   imports: [
     CommonModule,
-    CalendarRoutingModule
-  ]
+    CalendarRoutingModule, CalendarPreviousViewDirective, CalendarTodayDirective, CalendarNextViewDirective, CalendarMonthViewComponent, CalendarWeekViewComponent, CalendarDayViewComponent, CalendarDatePipe
+  ],
+  providers: [
+    provideCalendar({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+  ],
 })
 export class CalendarModule { }

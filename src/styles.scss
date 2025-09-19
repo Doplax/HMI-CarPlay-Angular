@@ -1,6 +1,9 @@
 @use "variables" as vars;
 
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 @import url(./styles/fonts.scss);
+
+
 
 * {
   margin: 0;
