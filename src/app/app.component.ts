@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CurrentStateService } from "@shared/services/current-state.service";
 import { Subscription } from 'rxjs';
-import { FontAwesomeIconsService } from './shared/services/fontAwesomeIcons.service';
+import { FontAwesomeIconsService } from './shared/services/font-awesome-icons.service';
 
 @Component({
     selector: 'app-root',

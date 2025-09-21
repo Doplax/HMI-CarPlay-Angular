@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CallRoutingModule } from "./books-routing.module";
+import { SharedModule} from '@shared/shared.module';
+
+// Components
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { BooksLayoutComponent } from './layout/books-layout.component';
-import { CallRoutingModule } from "./books-routing.module";
-
-
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CallRoutingModule } from "./books-routing.module";
   ],
   imports: [
     CommonModule,
-    CallRoutingModule
+    CallRoutingModule,
+    SharedModule
 ]
 })
 export class BooksModule { }

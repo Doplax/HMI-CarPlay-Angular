@@ -4,29 +4,24 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideBarComponent } from '@shared/components/side-bar/side-bar.component';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
 
-import { LockScreenComponent } from '@shared/components/lock-screen/lock-screen.component';
-import { VolumeBoxComponent } from '@shared/components/volume-box/volume-box.component';
-import { TopBarComponent } from '@shared/components/top-bar/top-bar.component';
+import { SharedModule} from '@shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
-    LockScreenComponent,
-    VolumeBoxComponent,
-    TopBarComponent,
+
   ],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })

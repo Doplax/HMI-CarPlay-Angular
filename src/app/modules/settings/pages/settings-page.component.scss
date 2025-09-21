@@ -9,8 +9,21 @@
 }
 
 
-.podcast-page {
+.settings-page {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
+  padding: 20px;
+
+  .settings-options{
+    height: 50px;
+    width: 100%;
+
+
+    .option{
+      background-color: vars.$basic-grey;
+
+    }
+  }
 }

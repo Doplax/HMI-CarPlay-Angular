@@ -15,6 +15,7 @@ import {
   faLocationArrow,
   faTriangleExclamation,
   faArrowsUpDownLeftRight,
+  faLanguage,
 } from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
@@ -32,6 +33,7 @@ const icons = [
   faLocationArrow,
   faTriangleExclamation,
   faArrowsUpDownLeftRight,
+  faLanguage,
 ];
 
 @Injectable({
