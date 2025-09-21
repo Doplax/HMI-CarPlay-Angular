@@ -1,5 +1,5 @@
 {
-  "name": "car-interface",
+  "name": "hmi-car-interface",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,12 +21,17 @@
     "@angular/router": "^20.2.1",
     "@fortawesome/angular-fontawesome": "^3.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "angular-calendar": "^0.32.0",
+    "angular-draggable-droppable": "^9.0.1",
+    "angular-resizable-element": "^8.0.0",
+    "date-fns": "^4.0.0",
     "mapbox-gl": "^3.14.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^20.3.2",
     "@angular/build": "^20.2.0",
     "@angular/cli": "~20.2.0",
     "@angular/compiler-cli": "^20.2.1",

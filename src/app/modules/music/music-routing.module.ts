@@ -1,13 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { BooksLayoutComponent } from './layout/books-layout.component';
 import { MusicLayoutComponent } from './layout/music-layout.component';
+import { MusicPageComponent } from './pages/music-page/music-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MusicLayoutComponent
-
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: MusicLayoutComponent,
+    children: [
+      {
+        path: 'home',
+        component: MusicPageComponent,
+      }
+    ]
   },
 ];
 

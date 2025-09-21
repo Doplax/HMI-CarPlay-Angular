@@ -1,6 +1,10 @@
 @use "variables" as vars;
 
+@import "global-classes"; // TODO: usar '@use'
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 @import url(./styles/fonts.scss);
+
+
 
 * {
   margin: 0;
@@ -8,6 +12,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
+  box-sizing: border-box;
 
   // GLOBAL SCROLLBAR STYLES <--
   &::-webkit-scrollbar {
