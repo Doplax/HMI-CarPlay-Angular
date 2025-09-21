@@ -3,16 +3,19 @@ import { CommonModule } from '@angular/common';
 import { PodcastPageComponent } from './pages/podcast-page/podcast-page.component';
 import { PodcastRoutingModule } from './podcast-routing.module';
 import { SharedModule} from '@shared/shared.module';
+import { PodcastLayoutComponent } from './layout/podcast-layout.component';
 
 
 @NgModule({
   declarations: [
+    PodcastLayoutComponent,
     PodcastPageComponent
   ],
   imports: [
     CommonModule,
     PodcastRoutingModule,
-    SharedModule
+    SharedModule,
+
   ],
 })
 export class PodcastModule {}

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { TranslatePipe } from '@shared/pipes/translate.pipe';
 
 //Components
 import {
@@ -12,24 +16,23 @@ import {
 } from '@shared/components/index';
 
 
-//Locale
-import localeES from '@angular/common/locales/es';
-import localeFrCA from '@angular/common/locales/en';
-
-import { registerLocaleData } from '@angular/common';
-registerLocaleData(localeES);
-registerLocaleData(localeFrCA);
-
-
 @NgModule({
   declarations: [
+    //Components
     TitleSectionComponent,
     LockScreenComponent,
     VolumeBoxComponent,
     TopBarComponent,
     SideBarComponent,
+
+    //Pipes
+    TranslatePipe
   ],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    HttpClientModule
+  ],
   exports: [
     //Components
     TitleSectionComponent,
@@ -38,8 +41,12 @@ registerLocaleData(localeFrCA);
     TopBarComponent,
     SideBarComponent,
 
+    //Pipes
+    TranslatePipe,
+
     //Modules
     FontAwesomeModule,
+    HttpClientModule
   ],
 })
 export class SharedModule {}

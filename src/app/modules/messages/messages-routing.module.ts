@@ -1,12 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MessagesPageComponent } from './pages/messages-page/messages-page.component';
+import { MessagesLayoutComponent } from './layout/messages-layout.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MessagesPageComponent,
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: MessagesLayoutComponent,
+    children: [
+      {
+        path: 'home',
+        component: MessagesPageComponent,
+      }
+    ]
   },
 ];
 

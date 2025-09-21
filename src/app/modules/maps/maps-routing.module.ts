@@ -1,11 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MapsPageComponent } from './pages/maps-page/maps-page.component';
+import { MapsLayoutComponent } from './layout/maps-layout.component';
 
 
 const routes: Routes = [
-  { path: '', component: MapsPageComponent,
-
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: MapsLayoutComponent,
+    children: [
+      {
+        path: 'home',
+        component: MapsPageComponent,
+      }
+    ]
   },
 ];
 

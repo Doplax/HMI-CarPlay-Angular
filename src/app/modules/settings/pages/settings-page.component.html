@@ -1,9 +1,36 @@
 <div class="settings-page">
-  <shared-title-section [title]="'Settings'" />
   <div class="settings-options">
+
+    <!-- Lang -->
     <div class="option">
-      <fa-icon [icon]="['fas', 'language']" class="option-icon"></fa-icon>
-      <span>Profile</span>
+      <div class="left-section">
+        <fa-icon [icon]="['fas', 'language']" class="option-icon"></fa-icon>
+        <span>Language:</span>
+      </div>
+
+      <div class="right-section">
+        <span>Español</span>
+        <!-- Toggle Switch -->
+        <label class="switch">
+          <input type="checkbox"
+                [checked]="i18n.currentLang === 'es'"
+                (change)="i18n.changeLenguage()"
+          />
+          <span class="slider"></span>
+        </label>
+        <span>English</span>
+      </div>
     </div>
+
+    <!-- Profile -->
+    <!--<div class="option">
+      <div class="left-section">
+        <fa-icon [icon]="['fas', 'user']" class="option-icon"></fa-icon>
+        <span>Favorite Color</span>
+      </div>
+
+      <div class="right-section">
+      </div>
+    </div>-->
   </div>
 </div>
