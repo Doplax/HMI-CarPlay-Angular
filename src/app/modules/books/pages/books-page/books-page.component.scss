@@ -2,18 +2,15 @@
 
 :host {
   display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: vars.$background-color;
 }
-
 
 .books-page {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 20px;
 
   .books-content {
     flex: 1;

@@ -5,9 +5,11 @@ import { SettingsRoutingModule } from './settings-routing.module';
 import { SettingsPageComponent } from './pages/settings-page.component';
 
 import { SharedModule } from '@src/app/shared/shared.module';
+import { SettingsLayoutComponent } from './layout/settings-layout.component';
 
 @NgModule({
   declarations: [
+    SettingsLayoutComponent,
     SettingsPageComponent
   ],
   imports: [

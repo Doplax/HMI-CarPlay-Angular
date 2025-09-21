@@ -1,0 +1,14 @@
+@use 'variables' as vars;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: vars.$background-color;
+}
+
+.call-layout-page {
+  height: 100%;
+  width: 100%;
+}

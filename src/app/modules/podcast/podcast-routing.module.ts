@@ -1,11 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PodcastPageComponent } from './pages/podcast-page/podcast-page.component';
+import { PodcastLayoutComponent } from './layout/podcast-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PodcastPageComponent
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: PodcastLayoutComponent,
+    children: [
+      {
+        path: 'home',
+        component: PodcastPageComponent,
+      }
+    ]
   },
 ];
 
