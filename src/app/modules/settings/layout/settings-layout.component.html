@@ -1,9 +1,5 @@
-<main>
-  <!-- Top-Bar -->
-  <call-top-bar/>
+<main class="g-layout">
+  <shared-title-section [title]="this.i18n.translate('TITLE')" />
 
-  <!-- Outlet -->
-  <div class="call-layout-page">
-    <router-outlet/>
-  </div>
+  <router-outlet/>
 </main>
