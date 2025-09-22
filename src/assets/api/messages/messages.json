@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Correos",
+    "message": "We tried to deliver your package today, but you were not at home. You can reschedule delivery or pick it up at your nearest Correos office. Track your shipment for more info: https://correos.es/track/XYZ123",
+    "date": "2025-09-22 08:12"
+  },
+  {
+    "name": "Amazon",
+    "message": "Good news! Your order #123-4567890 has been shipped and is on its way. Estimated arrival is September 24. You can see the status and change delivery preferences in your Amazon app.",
+    "date": "2025-09-22 09:05"
+  },
+  {
+    "name": "Banco Sabadell",
+    "message": "Hello! Your account statement for September is now available online. Please review recent transactions and make sure everything is correct. Log in to your Sabadell app to view details.",
+    "date": "2025-09-22 09:30"
+  },
+  {
+    "name": "Movistar",
+    "message": "Dear customer, your monthly bill of €29.95 will be charged to your account on September 25. If you wish to review your plan or payment options, visit movistar.es or use our mobile app.",
+    "date": "2025-09-22 10:10"
+  },
+  {
+    "name": "IKEA",
+    "message": "Exclusive offer for IKEA Family members: Enjoy an extra 10% discount on selected furniture and home decor today only! Visit your local IKEA store or shop online at ikea.com to redeem.",
+    "date": "2025-09-22 10:20"
+  },
+  {
+    "name": "Renfe",
+    "message": "Your train ticket for Barcelona-Madrid is confirmed. Departure is scheduled for September 23 at 15:00. Please arrive at least 20 minutes before departure and bring your digital ticket.",
+    "date": "2025-09-22 10:45"
+  },
+  {
+    "name": "Mercadona",
+    "message": "Mercadona now offers home delivery in your area! Order your groceries online and receive them at your doorstep. Check our website for available slots and product selection: mercadona.es",
+    "date": "2025-09-22 11:00"
+  },
+  {
+    "name": "Zara",
+    "message": "Your reserved item is ready for pickup at your selected Zara store. Please collect it before September 25. If you need more time or wish to cancel, manage your reservation in the Zara app.",
+    "date": "2025-09-22 11:35"
+  },
+  {
+    "name": "Endesa",
+    "message": "Your electricity bill for this month is now available. You can view, download, and pay securely online. Log in to your Endesa account or visit endesa.com for more information.",
+    "date": "2025-09-22 11:50"
+  },
+  {
+    "name": "Netflix",
+    "message": "Discover new releases and trending series this week on Netflix! Log in to your account to explore personalized recommendations and plan your next movie night.",
+    "date": "2025-09-22 12:00"
+  }
+]
