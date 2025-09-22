@@ -1,17 +1,16 @@
 @use 'variables' as vars;
 
 :host {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow-x: scroll;
+  min-height: 550px;
   background-color: vars.$background-color;
 }
 
 .messages-page {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-
-
 }

@@ -1,0 +1,26 @@
+<div
+  class="message-card"
+  [ngClass]="{ 'active': showBodyMessage }"
+  (click)="showBodyMessage = !showBodyMessage">
+  <!-- HEAD -->
+  <div class="head-section">
+    <div class="left-section">
+
+      <div class="initals-circle">
+        {{getInitaials(message.name)}}
+      </div>
+
+      <span>{{message.name}}</span>
+    </div>
+
+    <div class="right-section">
+      <span>{{message.date}}</span>
+
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-section">
+    <p>{{message.message}}</p>
+  </div>
+</div>

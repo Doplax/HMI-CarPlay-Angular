@@ -1,3 +1,5 @@
 <div class="messages-page">
-  
+  @for(message of messages; track $index){
+    <message-card [message]="message"/>
+  }
 </div>
