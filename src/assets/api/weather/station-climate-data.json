@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "generated": "2025-09-24 09:16:57"
+  },
+  "data": [
+    {
+      "month": 1,
+      "tavg": 8.8,
+      "tmin": 4.4,
+      "tmax": 13.2,
+      "prcp": 44,
+      "wspd": null,
+      "pres": 1018.7,
+      "tsun": 8748
+    },
+    {
+      "month": 2,
+      "tavg": 9.9,
+      "tmin": 5.4,
+      "tmax": 14.3,
+      "prcp": 36,
+      "wspd": null,
+      "pres": 1015.9,
+      "tsun": 9378
+    },
+    {
+      "month": 3,
+      "tavg": 11,
+      "tmin": 6.5,
+      "tmax": 15.6,
+      "prcp": 48,
+      "wspd": null,
+      "pres": 1016.8,
+      "tsun": 11214
+    },
+    {
+      "month": 4,
+      "tavg": 13,
+      "tmin": 8.5,
+      "tmax": 17.4,
+      "prcp": 51,
+      "wspd": null,
+      "pres": 1014.1,
+      "tsun": 12210
+    },
+    {
+      "month": 5,
+      "tavg": 16,
+      "tmin": 11.7,
+      "tmax": 20.3,
+      "prcp": 57,
+      "wspd": null,
+      "pres": 1015.7,
+      "tsun": 14868
+    },
+    {
+      "month": 6,
+      "tavg": 19.7,
+      "tmin": 15.4,
+      "tmax": 24,
+      "prcp": 38,
+      "wspd": null,
+      "pres": 1016.4,
+      "tsun": 16032
+    },
+    {
+      "month": 7,
+      "tavg": 22.9,
+      "tmin": 18.5,
+      "tmax": 27.3,
+      "prcp": 22,
+      "wspd": null,
+      "pres": 1016.7,
+      "tsun": 18498
+    },
+    {
+      "month": 8,
+      "tavg": 23.1,
+      "tmin": 18.8,
+      "tmax": 27.4,
+      "prcp": 66,
+      "wspd": null,
+      "pres": 1016.1,
+      "tsun": 16224
+    },
+    {
+      "month": 9,
+      "tavg": 21.1,
+      "tmin": 16.7,
+      "tmax": 25.5,
+      "prcp": 79,
+      "wspd": null,
+      "pres": 1017.1,
+      "tsun": 12408
+    },
+    {
+      "month": 10,
+      "tavg": 17.2,
+      "tmin": 12.7,
+      "tmax": 21.6,
+      "prcp": 94,
+      "wspd": null,
+      "pres": 1017,
+      "tsun": 10860
+    },
+    {
+      "month": 11,
+      "tavg": 12.5,
+      "tmin": 8.1,
+      "tmax": 16.9,
+      "prcp": 74,
+      "wspd": null,
+      "pres": 1016.6,
+      "tsun": 8712
+    },
+    {
+      "month": 12,
+      "tavg": 9.6,
+      "tmin": 5.3,
+      "tmax": 14,
+      "prcp": 50,
+      "wspd": null,
+      "pres": 1017.6,
+      "tsun": 8568
+    }
+  ]
+}

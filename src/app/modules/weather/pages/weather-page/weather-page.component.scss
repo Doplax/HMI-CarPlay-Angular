@@ -1,0 +1,44 @@
+@use 'variables' as vars;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: vars.$background-color;
+}
+
+
+.weather-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background: #f0f0f0;
+      tr {
+        th {
+          padding: 0.5em;
+          font-weight: bold;
+          border-bottom: 2px solid #ddd;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background: #fafafa;
+        }
+        td {
+          padding: 0.5em;
+          border-bottom: 1px solid #eee;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

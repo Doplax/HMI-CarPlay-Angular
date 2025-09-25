@@ -1,4 +1,4 @@
-@use 'variables' as vars;
+@use "variables" as vars;
 
 :host {
   display: flex;
@@ -71,7 +71,8 @@
       }
     }
 
-    .navigation-buttons { // <-- separated block for nav buttons
+    .navigation-buttons {
+      // <-- separated block for nav buttons
       display: flex;
       gap: 14px;
       align-items: center;
@@ -82,14 +83,15 @@
         border: none;
         border-radius: 14px;
         padding: 0 16px;
-        height: 40px;  // <-- shorter than view buttons <-- changed
+        height: 40px; // <-- shorter than view buttons <-- changed
         min-width: 70px; // <-- narrower <-- changed
         font-size: 15px; // <-- slightly smaller font <-- changed
         font-weight: 500;
         cursor: pointer;
         transition: background 0.2s, color 0.2s;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background: vars.$higlighted-blue; // <-- blue on hover/active
           color: black;
         }
@@ -109,10 +111,14 @@
       //background: vars.$basic-grey;
       padding: 8px 20px;
       border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       min-width: 180px;
       text-align: center;
       display: inline-block;
     }
+  }
+
+  .calendar-contgainer {
+    
   }
 }

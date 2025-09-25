@@ -1,5 +1,6 @@
 ## Features
 
+- **Internationalization (i18n)**: Full support for multiple languages.
 - **Map Integration**: Interactive maps powered by MapBox.
 - **Multimedia Playback**: Play audio content using data fetched via the Shazam API.
 - **Calendar Management**: Integrated calendar functionalities for scheduling and display.
@@ -11,7 +12,6 @@
 - **Lazy Loading**: Modules are loaded on demand for optimized performance.
 - **Highly Scalable Modular Architecture**: Clean separation between modules for easy maintenance and scalability.
 - **State Management Across Modules**: Shared and local state handled efficiently.
-- **Internationalization (i18n)**: Full support for multiple languages.
 - **Local Storage Handling**: Persist user data and settings in browser local storage.
 - **Custom Theming and Icons**: Modern UI with SVG icons and themed layouts.
 - **Font Awesome Icons**: Extensive use of Font Awesome for UI elements.

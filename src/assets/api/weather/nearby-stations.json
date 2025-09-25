@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "generated": "2025-09-24 09:10:40"
+  },
+  "data": [
+    {
+      "id": "08180",
+      "name": {
+        "en": "Barcelona / Esplugues de Llobregat"
+      },
+      "distance": 4851
+    },
+    {
+      "id": "08181",
+      "name": {
+        "en": "Barcelona / Aeropuerto"
+      },
+      "distance": 14405
+    },
+    {
+      "id": "LELL0",
+      "name": {
+        "en": "Sabadell / Bellaterra"
+      },
+      "distance": 15860.5
+    },
+    {
+      "id": "08184",
+      "name": {
+        "en": "Gerona / Costa Brava"
+      },
+      "distance": 75555.3
+    },
+    {
+      "id": "08175",
+      "name": {
+        "en": "Reus / Aeropuerto"
+      },
+      "distance": 88105.2
+    }
+  ]
+}

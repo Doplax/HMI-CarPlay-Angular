@@ -12,3 +12,6 @@
 [] Mover lo que pueda de app a home
 
 
+# Global
+Aprender a usar las animaciones de Angular
+

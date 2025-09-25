@@ -15,7 +15,6 @@
       "path": "assets/svg/home-page/call.svg",
       "route": "call"
     },
-
     {
       "name": "Maps",
       "path": "assets/svg/home-page/maps.svg",
@@ -32,14 +31,21 @@
       "route": "music"
     },
     {
-      "name": "Podcast",
-      "path": "assets/svg/home-page/podcast.svg",
-      "route": "podcast"
-    },
-    {
       "name": "Settings",
       "path": "assets/svg/home-page/settings.svg",
       "route": "settings"
+    },
+    {
+      "name": "Weather",
+      "path": "assets/svg/home-page/weather.svg",
+      "route": "weather"
+    }
+  ],
+  "unUsedModules": [
+    {
+      "name": "Podcast",
+      "path": "assets/svg/home-page/podcast.svg",
+      "route": "podcast"
     }
   ]
 }
