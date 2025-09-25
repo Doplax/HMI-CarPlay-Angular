@@ -1,0 +1,109 @@
+@use 'variables' as vars;
+
+.weather-cards-page {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    vars.$background-color 60%,
+    lighten(vars.$background-color, 12%) 100%
+  );
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.weather-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  min-width: 220px;
+  max-width: 260px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
+  }
+
+  .card-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    .weather-date {
+      font-size: 1.1rem;
+      font-weight: 600;
+      //color: vars.$primary-color;
+    }
+    .weather-icon {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .card-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    .temp {
+      font-size: 2.3rem;
+      font-weight: 700;
+      //color: vars.$accent-color;
+      .minmax {
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #444;
+        margin-top: 0.3rem;
+        .tmin, .tmax {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .card-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+    color: #444;
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      span {
+        font-weight: 500;
+        //color: vars.$primary-color;
+      }
+      .gust {
+        font-weight: 400;
+        color: #888;
+        font-size: 0.95em;
+      }
+    }
+  }
+}

@@ -4,12 +4,17 @@ import { WeatherPageComponent } from './pages/weather-page/weather-page.componen
 import { WeatherRoutingModule } from './weather-routing.module';
 import { SharedModule} from '@shared/shared.module';
 import { WeatherLayoutComponent } from './layout/weather-layout.component';
+import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 
 
 @NgModule({
   declarations: [
+    //Pages
     WeatherLayoutComponent,
-    WeatherPageComponent
+    WeatherPageComponent,
+
+    //Components
+    WeatherCardComponent
   ],
   imports: [
     CommonModule,

@@ -18,8 +18,6 @@ export class WeatherPageComponent {
   ){
     this.weatherService.getDailyStation().subscribe(({data} : WeatherApiResponse) => {
       this.weatherData = data;
-      debugger
-      console.log(this.weatherData);
     });
   }
 }

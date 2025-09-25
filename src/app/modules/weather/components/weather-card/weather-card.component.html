@@ -1,0 +1,44 @@
+<div class="weather-cards-page">
+  <div class="cards-container">
+    <div class="weather-card" *ngFor="let entry of weatherData; let i = index">
+      <div class="card-header">
+        <div class="weather-date">
+          {{ entry.date | date:'EEE, MMM d' }}
+        </div>
+        <div class="weather-icon">
+          <!-- Example: use a static SVG or emoji for now, you can wire to icons later -->
+          <span *ngIf="entry.prcp > 0">🌧️</span>
+          <span *ngIf="entry.snow">❄️</span>
+          <span *ngIf="entry.prcp === 0 && !entry.snow">☀️</span>
+        </div>
+      </div>
+      <div class="card-main">
+        <div class="temp">
+          <span class="tavg">{{ entry.tavg }}°C</span>
+          <span class="minmax">
+            <span class="tmin">↓ {{ entry.tmin }}°</span>
+            <span class="tmax">↑ {{ entry.tmax }}°</span>
+          </span>
+        </div>
+      </div>
+      <div class="card-details">
+        <div class="detail rain">
+          <span>Rain:</span> {{ entry.prcp }} mm
+        </div>
+        <div class="detail snow">
+          <span>Snow:</span> {{ entry.snow ?? '—' }} mm
+        </div>
+        <div class="detail wind">
+          <span>Wind:</span> {{ entry.wspd }} km/h
+          <span class="gust">(Gust: {{ entry.wpgt }} km/h)</span>
+        </div>
+        <div class="detail pressure">
+          <span>Pressure:</span> {{ entry.pres }} hPa
+        </div>
+        <div class="detail sun">
+          <span>Sun:</span> {{ entry.tsun ?? '—' }} h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
