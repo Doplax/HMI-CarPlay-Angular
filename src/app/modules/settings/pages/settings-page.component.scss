@@ -14,18 +14,21 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 20px;
 
 
 
   .settings-options {
     .option {
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 1rem;
       background-color: vars.$basic-grey;
-
-
+      padding: 18px 24px;
+      color: white;
+      border-radius: vars.$card-border-radius;
+      min-height: vars.$card-min-height;
       .switch {
         position: relative;
         display: inline-block;
@@ -38,6 +41,7 @@
           width: 0;
           height: 0;
         }
+
         .slider {
           position: absolute;
           cursor: pointer;
@@ -63,6 +67,46 @@
           transform: translateX(18px);
         }
       }
+
+      .left-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: vars.$card-border-radius;
+
+          background-color: vars.$icon-color;
+          min-width: 40px;
+          min-height: 40px;
+        }
+        > span {
+          font-weight: 500;
+          font-size: vars.$card-primary-text-size;
+          margin-left: 20px;
+
+        }
+      }
+
+
+      .right-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > span {
+          font-weight: 500;
+          font-size: vars.$card-secondary-text-size;
+        }
+      }
+
+
+      
+
+
     }
   }
 }

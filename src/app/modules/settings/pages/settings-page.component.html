@@ -1,15 +1,17 @@
 <div class="settings-page">
   <div class="settings-options">
 
-    <!-- Lang -->
+    <!-- LANG CARD -->
     <div class="option">
       <div class="left-section">
-        <fa-icon [icon]="['fas', 'language']" class="option-icon"></fa-icon>
-        <span>Language:</span>
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'language']" class="option-icon"></fa-icon>
+        </div>
+        <span>Language</span>
       </div>
 
       <div class="right-section">
-        <span>Español</span>
+        <span>Eng</span>
         <!-- Toggle Switch -->
         <label class="switch">
           <input type="checkbox"
@@ -18,19 +20,70 @@
           />
           <span class="slider"></span>
         </label>
-        <span>English</span>
+        <span>Esp</span>
       </div>
     </div>
 
-    <!-- Profile -->
-    <!--<div class="option">
+    <!-- LOCATION CARD -->
+    <div class="option">
       <div class="left-section">
-        <fa-icon [icon]="['fas', 'user']" class="option-icon"></fa-icon>
-        <span>Favorite Color</span>
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'location-dot']" class="option-icon"></fa-icon>
+        </div>
+        <span>Location</span>
       </div>
 
       <div class="right-section">
+        <!-- Toggle Switch -->
+        <label class="switch">
+          <select [(ngModel)]="selectedProvince">
+            <option value="">Select a province</option>
+            @for (province of provinces; track $index) {
+              <option [value]="province">{{ province }} </option>
+            }
+          </select>
+        </label>
       </div>
-    </div>-->
+    </div>
+
+    <!-- ASPECTO CARD -->
+    <div class="option">
+      <div class="left-section">
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'circle-half-stroke']" class="option-icon"></fa-icon>
+        </div>
+        <span>Aspecto</span>
+      </div>
+
+      <div class="right-section">
+        <span>Light</span>
+        <!-- Toggle Switch -->
+        <label class="switch">
+          <input type="checkbox"
+          [checked]="settingsService.getLightMode() === true"
+          (change)="settingsService.switchLightMode()"
+          />
+          <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+      </div>
+    </div>
+
+    <!-- ASPECTO CARD -->
+    <div class="option">
+      <div class="left-section">
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'images']" class="option-icon"></fa-icon>
+        </div>
+        <span>Fondo de pantalla</span>
+      </div>
+
+      <div class="right-section">
+        <fa-icon [icon]="['fas', 'chevron-right']" class="option-icon"></fa-icon>
+
+      </div>
+    </div>
+
+
   </div>
 </div>
