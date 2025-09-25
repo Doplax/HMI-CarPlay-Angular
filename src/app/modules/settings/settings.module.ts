@@ -7,6 +7,9 @@ import { SettingsPageComponent } from './pages/settings-page.component';
 import { SharedModule } from '@src/app/shared/shared.module';
 import { SettingsLayoutComponent } from './layout/settings-layout.component';
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     SettingsLayoutComponent,
@@ -15,7 +18,8 @@ import { SettingsLayoutComponent } from './layout/settings-layout.component';
   imports: [
     CommonModule,
     SettingsRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class SettingsModule { }

@@ -16,6 +16,10 @@ import {
   faTriangleExclamation,
   faArrowsUpDownLeftRight,
   faLanguage,
+  faLocationDot,
+  faCircleHalfStroke,
+  faImages,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
@@ -34,6 +38,10 @@ const icons = [
   faTriangleExclamation,
   faArrowsUpDownLeftRight,
   faLanguage,
+  faLocationDot,
+  faCircleHalfStroke,
+  faImages,
+  faChevronRight
 ];
 
 @Injectable({
