@@ -39,6 +39,11 @@ const routes: Routes = [
       import('@modules/music/music.module').then((m) => m.MusicModule),
   },
   {
+    path: 'weather',
+    loadChildren: () =>
+      import('@modules/weather/weather.module').then((m) => m.WeatherModule),
+  },
+  {
     path: 'settings',
     loadChildren: () =>
       import('@modules/settings/settings.module').then((m) => m.SettingsModule),
