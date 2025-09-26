@@ -1,1 +1,5 @@
-{ "TITLE": "Books"}
+{
+  "TITLE": "Books",
+  "NO_AUDIOBOOKS": "No audiobooks available",
+  "AUDIOBOOKS_HINT": "On your iPhone, open the Books app and tap Audiobooks to get started" 
+}

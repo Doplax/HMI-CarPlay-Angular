@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { I18nService } from '@shared/services/i18n.service';
 
 @Component({
     selector: 'app-books-page',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class BooksPageComponent {
+
+  constructor(
+    public i18n: I18nService
+  ){}
 
 }

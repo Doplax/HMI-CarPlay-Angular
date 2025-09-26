@@ -1,42 +1,42 @@
 {
   "icons": [
     {
-      "name": "Books",
+      "name": "BOOKS",
       "path": "assets/svg/home-page/books.svg",
       "route": "books"
     },
     {
-      "name": "Calendar",
+      "name": "CALENDAR",
       "path": "assets/svg/home-page/calendar.svg",
       "route": "calendar"
     },
     {
-      "name": "Call",
+      "name": "CALL",
       "path": "assets/svg/home-page/call.svg",
       "route": "call"
     },
     {
-      "name": "Maps",
+      "name": "MAPS",
       "path": "assets/svg/home-page/maps.svg",
       "route": "maps"
     },
     {
-      "name": "Messages",
+      "name": "MESSAGES",
       "path": "assets/svg/home-page/messages.svg",
       "route": "messages"
     },
     {
-      "name": "Music",
+      "name": "MUSIC",
       "path": "assets/svg/home-page/music.svg",
       "route": "music"
     },
     {
-      "name": "Settings",
+      "name": "SETTINGS",
       "path": "assets/svg/home-page/settings.svg",
       "route": "settings"
     },
     {
-      "name": "Weather",
+      "name": "WEATHER",
       "path": "assets/svg/home-page/weather.svg",
       "route": "weather"
     }

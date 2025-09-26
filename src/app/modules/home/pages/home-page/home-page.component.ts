@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Icon } from '@shared/types/global.interfaces'
 import icons  from '@assets/svg/home-page/icons.json';
+import { I18nService } from '@shared/services/i18n.service';
 
 
 @Component({
@@ -9,10 +10,9 @@ import icons  from '@assets/svg/home-page/icons.json';
     styleUrls: ['./home-page.component.scss'],
     standalone: false
 })
-export class HomePageComponent implements OnInit{
-  iconsList: Icon[] = icons.icons;  // TODO: destructuring in a better way?
+export class HomePageComponent {
+  iconsList: Icon[] = icons.icons;
 
+    constructor(public i18n: I18nService){}
 
-  ngOnInit(): void {
-  }
 }
