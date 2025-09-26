@@ -5,10 +5,19 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: vars.$background-color;
-}
+  background-image: url("/assets/img/background-homescreen.png");
+  background-size: 100% 100%;}
 
-.call-layout-page {
+main {
+  position: relative;
   height: 100%;
   width: 100%;
+}
+
+
+home-navigation{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  right: 480px;
 }

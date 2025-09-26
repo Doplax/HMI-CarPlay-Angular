@@ -19,8 +19,12 @@ import {
   faLocationDot,
   faCircleHalfStroke,
   faImages,
-  faChevronRight
+  faChevronRight,
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
+
+//?HTML Exapmle
+//<fa-icon [icon]="['fas','microphone-slash']"/>
 
 const icons = [
   faCoffee,
@@ -41,7 +45,8 @@ const icons = [
   faLocationDot,
   faCircleHalfStroke,
   faImages,
-  faChevronRight
+  faChevronRight,
+  faChevronLeft,
 ];
 
 @Injectable({
@@ -53,5 +58,4 @@ export class FontAwesomeIconsService {
   }
 }
 
-//?HTML Exapmle
-//<fa-icon [icon]="['fas','microphone-slash']"/>
+

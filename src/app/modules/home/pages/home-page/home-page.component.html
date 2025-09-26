@@ -4,8 +4,9 @@
     <div class="icon-box" [routerLink]="icon.route">
       <div class="icon-content">
         <img [src]="icon.path" [alt]="icon.name" />
-        <div class="icon-name">{{ icon.name }}</div>
+        <div class="icon-name">{{ this.i18n.translate(icon.name) }}</div>
       </div>
     </div>
   }
+
 </div>

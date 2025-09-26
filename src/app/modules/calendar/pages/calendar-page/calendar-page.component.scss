@@ -52,7 +52,7 @@
         }
 
         &.active {
-          background: vars.$higlighted-blue;
+          background: vars.$highlighted-blue;
           color: black;
           font-weight: 500;
 
@@ -61,11 +61,11 @@
           }
         }
         &.highlighted {
-          color: vars.$higlighted-blue;
+          color: vars.$highlighted-blue;
           font-weight: 500;
 
           .icon {
-            color: vars.$higlighted-blue;
+            color: vars.$highlighted-blue;
           }
         }
       }
@@ -92,18 +92,18 @@
 
         &:hover,
         &:focus {
-          background: vars.$higlighted-blue; // <-- blue on hover/active
+          background: vars.$highlighted-blue; // <-- blue on hover/active
           color: black;
         }
         &.active {
-          background: vars.$higlighted-blue;
+          background: vars.$highlighted-blue;
           color: black;
         }
       }
     }
 
     h3 {
-      color: vars.$higlighted-blue;
+      color: vars.$highlighted-blue;
       margin: 0 32px;
       font-size: 20px;
       font-weight: 600;
@@ -119,6 +119,6 @@
   }
 
   .calendar-contgainer {
-    
+
   }
 }

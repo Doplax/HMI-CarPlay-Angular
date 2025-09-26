@@ -18,7 +18,7 @@
 }
 
 :host(.isVisible) {
-  z-index: 0;
+  z-index: 10;
   transition: z-index 0s; /* Tardara 0s en pasar de normal a isVisible */
 }
 

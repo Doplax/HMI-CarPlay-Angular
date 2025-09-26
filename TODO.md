@@ -12,6 +12,9 @@
 [] Mover lo que pueda de app a home
 
 
+# SETTINGS
+[] Cambiar idioma de i18n con observables
+
 # Global
 Aprender a usar las animaciones de Angular
 

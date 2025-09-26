@@ -1,0 +1,15 @@
+<div class="navigation-container">
+  <div class="arrow" (click)="prevIcon()">
+    <fa-icon [icon]="['fas','chevron-left']"/>
+  </div>
+
+  <div class="icon-group">
+    @for (icon of icons; track $index) {
+      <div class="nav-icon" [class.active]="$index === activeIndex"></div>
+    }
+  </div>
+
+  <div class="arrow" (click)="nextIcon()">
+    <fa-icon [icon]="['fas','chevron-right']"/>
+  </div>
+</div>
