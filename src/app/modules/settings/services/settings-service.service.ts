@@ -65,14 +65,16 @@ export class SettingsService {
 
   lightMode: boolean = false;
 
+  latitude: number | null = null;  // <-- store latitude in the service
+  longitude: number | null = null; // <-- store longitude in the service
+
   constructor(
     private http: HttpClient
   ) { }
 
-  getProvincesList(): string[] {
-      return this.provinces;
-  }
 
+
+  // THEME
   getLightMode(): boolean {
     return this.lightMode;
   }
@@ -80,4 +82,31 @@ export class SettingsService {
   switchLightMode(): boolean {
     return this.lightMode = !this.lightMode;
   }
+
+  // LOCATION
+  getProvincesList(): string[] {
+    return this.provinces;
+  }
+
+  async updateCurrentLocation(){
+    try {
+      const position = await new Promise<GeolocationPosition>((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+      });
+      this.latitude = position.coords.latitude;    // e.g., 41.3851 <-- user's latitude
+      this.longitude = position.coords.longitude;  // e.g., 2.1734 <-- user's longitude
+    } catch (error) {
+      // error: GeolocationPositionError
+      alert('Location access denied or unavailable'); // <-- if user blocks location
+
+    }
+  }
+
+  getCoordinates(): {lat: number, lng: number} {
+    const lat = this.latitude ?? 2.15;
+    const lng = this.longitude ?? 41.5;
+
+    return { lat, lng }
+  }
+
 }

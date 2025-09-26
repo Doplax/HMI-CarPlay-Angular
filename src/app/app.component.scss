@@ -1,6 +1,6 @@
 @use "variables" as vars;
 
-.display {
+.main {
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -22,8 +22,7 @@
     justify-content: center;
   }
 
-  // TODO: Refactor this into .display
-  .main {
+  .display {
     position: relative;
     top: -13px;
     left: -17px;
@@ -33,9 +32,7 @@
     overflow: hidden;
     height: 650px;
     width: 1170px;
-
-    background-image: url("/assets/img/background-homescreen.png");
-    background-size: 100% 100%; /* Ajusta la imagen para que se deforme y cubra todo el contenedor */
+    background-color: vars.$background-color;
   }
 
   footer {
