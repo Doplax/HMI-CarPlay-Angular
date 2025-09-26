@@ -13,6 +13,8 @@ import { I18nService } from '@shared/services/i18n.service';
 export class HomePageComponent {
   iconsList: Icon[] = icons.icons;
 
-    constructor(public i18n: I18nService){}
+  constructor(public i18n: I18nService){}
+
+  
 
 }

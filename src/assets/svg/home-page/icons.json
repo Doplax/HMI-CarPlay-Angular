@@ -3,43 +3,44 @@
     {
       "name": "BOOKS",
       "path": "assets/svg/home-page/books.svg",
-      "route": "books"
+      "route": "/books"
     },
     {
       "name": "CALENDAR",
       "path": "assets/svg/home-page/calendar.svg",
-      "route": "calendar"
+      "route": "/calendar"
     },
     {
       "name": "CALL",
       "path": "assets/svg/home-page/call.svg",
-      "route": "call"
+      "route": "/call"
     },
     {
       "name": "MAPS",
       "path": "assets/svg/home-page/maps.svg",
-      "route": "maps"
+      "route": "/maps"
     },
     {
       "name": "MESSAGES",
       "path": "assets/svg/home-page/messages.svg",
-      "route": "messages"
+      "route": "/messages"
     },
     {
       "name": "MUSIC",
       "path": "assets/svg/home-page/music.svg",
-      "route": "music"
-    },
-    {
-      "name": "SETTINGS",
-      "path": "assets/svg/home-page/settings.svg",
-      "route": "settings"
+      "route": "/music"
     },
     {
       "name": "WEATHER",
       "path": "assets/svg/home-page/weather.svg",
-      "route": "weather"
+      "route": "/weather"
+    },
+    {
+      "name": "SETTINGS",
+      "path": "assets/svg/home-page/settings.svg",
+      "route": "/settings"
     }
+
   ],
   "unUsedModules": [
     {
