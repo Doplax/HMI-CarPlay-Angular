@@ -5,7 +5,11 @@
 
   <div class="icon-group">
     @for (icon of icons; track $index) {
-      <div class="nav-icon" [class.active]="$index === activeIndex"></div>
+      <div
+        class="nav-icon"
+        [class.active]="$index === activeIndex"
+        (click)="onIconClick($index)">
+      </div>
     }
   </div>
 

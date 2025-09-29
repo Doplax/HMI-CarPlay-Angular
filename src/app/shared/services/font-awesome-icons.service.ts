@@ -21,6 +21,10 @@ import {
   faImages,
   faChevronRight,
   faChevronLeft,
+  faStepBackward,
+  faPlay,
+  faStepForward,
+  faBed,
 } from '@fortawesome/free-solid-svg-icons';
 
 //?HTML Exapmle
@@ -47,6 +51,10 @@ const icons = [
   faImages,
   faChevronRight,
   faChevronLeft,
+  faStepBackward,
+  faPlay,
+  faStepForward,
+  faBed,
 ];
 
 @Injectable({

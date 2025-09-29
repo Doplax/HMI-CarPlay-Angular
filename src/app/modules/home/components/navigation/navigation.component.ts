@@ -24,7 +24,7 @@ export class NavigationComponent {
   prevIcon() {
     if (this.activeIndex > 0) {
       this.activeIndex--;
-      this.navigate();
+    this.navigate();
     }
   }
 
@@ -41,5 +41,10 @@ export class NavigationComponent {
     } else if (this.activeIndex === 0) {
       this.router.navigate(['home/split']);
     }
+  }
+
+  onIconClick(index: number) {
+    this.activeIndex = index;
+    this.navigate();
   }
 }
