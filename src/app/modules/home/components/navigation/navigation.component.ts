@@ -5,19 +5,26 @@ import { Router } from '@angular/router';
   selector: 'home-navigation',
   standalone: false,
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+  styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
-
   constructor(private router: Router) {}
 
-  icons = [0,1];
+  icons = [0, 1];
   activeIndex = 1;
+
+  ngOnInit() {
+    if (this.router.url === '/home/split') {
+      this.activeIndex = 0;
+    } else if (this.router.url === '/home') {
+      this.activeIndex = 1;
+    }
+  }
 
   prevIcon() {
     if (this.activeIndex > 0) {
       this.activeIndex--;
-      this.navigate();
+    this.navigate();
     }
   }
 
@@ -30,9 +37,14 @@ export class NavigationComponent {
 
   navigate() {
     if (this.activeIndex === 1) {
-      this.router.navigate(['home']); 
+      this.router.navigate(['home']);
     } else if (this.activeIndex === 0) {
-      this.router.navigate(['home/split']); 
+      this.router.navigate(['home/split']);
     }
+  }
+
+  onIconClick(index: number) {
+    this.activeIndex = index;
+    this.navigate();
   }
 }

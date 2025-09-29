@@ -1,36 +1,46 @@
 <main>
   <!-- Map -->
-  <div class="map-container container">
+  <section class="map-container container">
     <img id="map" src="assets/img/mapboxMocked.png" alt="map">
-  </div>
+  </section>
 
   <!-- navigation -->
-  <div class="navigation-container container">
+  <section class="navigation-container container g-glassmorphism">
     <div class="nav-content">
-      <i class="fas fa-bed"></i> <!-- <-- Hotel icon -->
-      <span>MEININGER Hotel</span>
-      <span>Amsterdam Cen...</span>
+      <article>
+        <fa-icon [icon]="['fas','bed']"/>
+        <p>MEININGER Hotel</p>
+        <span>Amsterdam Cen...</span>
+      </article>
+
+      <article>
+        <fa-icon [icon]="['fas','bed']"/>
+        <p>MEININGER Hotel</p>
+        <span>Amsterdam Cen...</span>
+      </article>
     </div>
-  </div>
+  </section>
 
   <!-- Music -->
-  <div class="music-container container">
+  <section class="music-container container g-glassmorphism">
     <div class="music-content">
       <div class="album-art">
         <img src="assets/img/JuiceWLRD.webp" alt="Outro">
       </div>
       <div class="song-info">
-        <h3>Outro</h3>
-        <p>CARV</p>
+        <h3>Empty</h3>
+        <p>Juice WRLD</p>
       </div>
+
       <div class="controls">
-        <i class="fas fa-step-backward"></i> <!-- <-- Previous -->
-        <i class="fas fa-play"></i>          <!-- <-- Play/Pause -->
-        <i class="fas fa-step-forward"></i>  <!-- <-- Next -->
+        <fa-icon [icon]="['fas','step-backward']"/>
+        <fa-icon [icon]="['fas','play']"/>
+        <fa-icon [icon]="['fas','step-forward']"/>
       </div>
+
       <div class="progress-bar">
         <div class="progress"></div>
       </div>
     </div>
-  </div>
+  </section>
 </main>

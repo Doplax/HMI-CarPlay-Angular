@@ -1,3 +1,5 @@
+@use "variables" as vars;
+
 main {
   width: 100%;
   height: 100%;
@@ -29,49 +31,78 @@ main {
   // NAVIGATION
   .navigation-container {
     grid-area: navigation;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); // <-- Gradient like image
     display: flex;
     align-items: center;
     padding: 20px;
 
     .nav-content {
       display: flex;
-      flex-direction: column;
-      color: white;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
 
-      i {
-        font-size: 2rem;
-        margin-bottom: 10px;
+
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: #fff;
+        cursor: pointer;
+        transition: transform 0.2s;
+
+         &:hover{
+          transform: scale(1.07);
+          transition: transform 0.2s;
+         }
+
+        fa-icon {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          background-color: vars.$icon-color;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 300;
+        };
       }
 
-      span:first-of-type {
-        font-weight: bold;
-        font-size: 1.1rem;
-      }
 
-      span:last-of-type {
-        font-size: 0.9rem;
-        opacity: 0.8;
-      }
+      //span:first-of-type {
+      //  font-weight: bold;
+      //  font-size: 1.1rem;
+      //}
+
+      //span:last-of-type {
+      //  font-size: 0.9rem;
+      //  opacity: 0.8;
+      //}
     }
   }
 
   // MUSIC
   .music-container {
     grid-area: music;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); // <-- Dark gradient
     padding: 20px;
 
     .music-content {
       display: flex;
       flex-direction: column;
+      align-items: center;
       height: 100%;
+      width: 100%;
       color: white;
 
       .album-art {
-        width: 80px;
-        height: 80px;
+        width: 250px;
+        height: 250px;
         margin-bottom: 15px;
 
         img {
@@ -83,6 +114,9 @@ main {
       }
 
       .song-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 15px;
 
         h3 {
@@ -102,13 +136,14 @@ main {
         gap: 20px;
         margin-bottom: 15px;
 
-        i {
+        fa-icon {
           font-size: 1.5rem;
           cursor: pointer;
           transition: opacity 0.2s;
 
           &:hover {
             opacity: 0.7;
+            transform: scale(1.1);
           }
         }
       }
