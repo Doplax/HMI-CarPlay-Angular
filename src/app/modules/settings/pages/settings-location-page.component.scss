@@ -1,0 +1,191 @@
+@use 'variables' as vars;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: vars.$background-color;
+}
+
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+  .settings-options {
+    padding: 0;
+
+    .option {
+      margin: 0 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background-color: vars.$basic-grey;
+      padding: 18px 24px;
+      color: white;
+      border-radius: vars.$card-border-radius;
+      min-height: vars.$card-min-height;
+      transition: background-color 0.2s;
+
+      .left-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        .icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: vars.$card-border-radius;
+          background-color: vars.$icon-color;
+          min-width: 40px;
+          min-height: 40px;
+
+          fa-icon {
+            color: white;
+          }
+        }
+
+        > span {
+          font-weight: 500;
+          font-size: vars.$card-primary-text-size;
+          margin-left: 20px;
+        }
+      }
+
+      .right-section {
+        display: flex;
+        align-items: center;
+
+        fa-icon {
+          color: vars.$icon-color;
+        }
+      }
+    }
+  }
+
+  .location-inputs {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px 15px;
+    margin-bottom: 0;
+
+    .input-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: vars.$font-size-label;
+        color: vars.$highlighted-blue;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+      }
+
+      input {
+        background-color: vars.$basic-grey;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        color: white;
+        padding: 12px 14px;
+        border-radius: 12px;
+        font-size: vars.$font-size-body;
+        font-weight: 400;
+        transition: all 0.3s;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:focus {
+          outline: none;
+          border-color: vars.$highlighted-blue;
+          box-shadow: 0 0 0 2px rgba(100, 210, 255, 0.2);
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px 15px;
+    margin-bottom: 5px;
+  }
+
+  .action-button {
+    flex: 1;
+    padding: 14px 20px;
+    color: white;
+    border: none;
+    border-radius: vars.$card-border-radius;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.primary {
+      background-color: vars.$highlighted-blue;
+      color: #000;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    &.secondary {
+      background-color: vars.$basic-grey;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+
+      &:hover {
+        border-color: vars.$highlighted-blue;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .option-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    .option {
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.12);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

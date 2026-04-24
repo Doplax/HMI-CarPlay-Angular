@@ -102,11 +102,22 @@
           font-size: vars.$card-secondary-text-size;
         }
       }
+    }
+  }
 
+  .option-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 10px;
 
-      
+    .option {
+      cursor: pointer;
+      transition: background-color 0.2s;
 
-
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
     }
   }
 }

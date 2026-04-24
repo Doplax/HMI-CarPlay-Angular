@@ -25,6 +25,10 @@ import {
   faPlay,
   faStepForward,
   faBed,
+  faMap,
+  faCheckCircle,
+  faLayerGroup,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 
 //?HTML Exapmle
@@ -55,6 +59,10 @@ const icons = [
   faPlay,
   faStepForward,
   faBed,
+  faMap,
+  faCheckCircle,
+  faLayerGroup,
+  faCheck,
 ];
 
 @Injectable({

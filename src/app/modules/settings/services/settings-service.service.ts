@@ -109,4 +109,9 @@ export class SettingsService {
     return { lat, lng }
   }
 
+  setCoordinates(latitude: number, longitude: number): void {
+    this.latitude = latitude;
+    this.longitude = longitude;
+  }
+
 }
