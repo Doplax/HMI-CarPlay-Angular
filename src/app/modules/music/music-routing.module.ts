@@ -8,6 +8,7 @@ import { MusicLibraryPageComponent } from './pages/music-library-page/music-libr
 import { MusicPlayerPageComponent } from './pages/music-player-page/music-player-page.component';
 
 const routes: Routes = [
+  { path: 'player/:id', component: MusicPlayerPageComponent },
   {
     path: '',
     component: MusicLayoutComponent,
@@ -17,7 +18,6 @@ const routes: Routes = [
       { path: 'new', component: MusicNewPageComponent },
       { path: 'radio', component: MusicRadioPageComponent },
       { path: 'library', component: MusicLibraryPageComponent },
-      { path: 'player/:id', component: MusicPlayerPageComponent },
     ],
   },
 ];
