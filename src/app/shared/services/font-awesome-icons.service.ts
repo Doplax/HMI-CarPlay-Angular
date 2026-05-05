@@ -39,6 +39,7 @@ import {
   faAddressBook,
   faTableCellsLarge,
   faVoicemail,
+  faMusic,
 } from '@fortawesome/free-solid-svg-icons';
 
 //?HTML Exapmle
@@ -83,6 +84,7 @@ const icons = [
   faAddressBook,
   faTableCellsLarge,
   faVoicemail,
+  faMusic,
 ];
 
 @Injectable({
