@@ -1,5 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +24,7 @@ import { SharedModule } from '@shared/shared.module';
 @NgModule({
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, SharedModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule, SharedModule],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     //{ provide: LOCALE_ID, useValue: I18nService.currentLang },

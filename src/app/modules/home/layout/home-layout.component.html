@@ -1,4 +1,6 @@
 <main>
-  <router-outlet/>
+  <div class="route-container" [@routeAnimation]="routeIndex(outlet)">
+    <router-outlet #outlet="outlet"/>
+  </div>
   <home-navigation/>
 </main>
