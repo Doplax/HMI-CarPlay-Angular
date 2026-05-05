@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, map, Observable, of, shareReplay, tap } from 'rxjs';
+import { map, Observable, shareReplay, tap } from 'rxjs';
 import { ITunesSearchResponse, ITunesTrack, MusicTrack } from '../types/music.type';
+import { MediaPlayerService } from '@shared/services/media-player.service';
+import { MediaItem } from '@shared/types/media.type';
 
 @Injectable({
   providedIn: 'root',
@@ -9,10 +11,12 @@ import { ITunesSearchResponse, ITunesTrack, MusicTrack } from '../types/music.ty
 export class MusicService {
   private readonly baseUrl = 'https://itunes.apple.com';
   private cache = new Map<string, Observable<MusicTrack[]>>();
-  private currentTrack$ = new BehaviorSubject<MusicTrack | null>(null);
   private trackById = new Map<string, MusicTrack>();
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private mediaPlayer: MediaPlayerService,
+  ) {}
 
   getTopPicks(): Observable<MusicTrack[]> {
     return this.search('top hits 2025', 18, 'topPicks');
@@ -34,13 +38,28 @@ export class MusicService {
     return this.trackById.get(id);
   }
 
-  selectTrack(track: MusicTrack): void {
+  playTrack(track: MusicTrack): void {
     this.trackById.set(track.id, track);
-    this.currentTrack$.next(track);
+    this.mediaPlayer.play(this.toMediaItem(track));
   }
 
-  getCurrentTrack(): Observable<MusicTrack | null> {
-    return this.currentTrack$.asObservable();
+  loadTrack(track: MusicTrack): void {
+    this.trackById.set(track.id, track);
+    this.mediaPlayer.load(this.toMediaItem(track));
+  }
+
+  toMediaItem(track: MusicTrack): MediaItem {
+    return {
+      id: track.id,
+      source: 'music',
+      title: track.title,
+      subtitle: track.artist,
+      album: track.album,
+      artwork: track.artwork,
+      artworkLarge: track.artworkLarge,
+      durationMs: track.durationMs,
+      previewUrl: track.previewUrl,
+    };
   }
 
   private search(term: string, limit: number, cacheKey: string): Observable<MusicTrack[]> {

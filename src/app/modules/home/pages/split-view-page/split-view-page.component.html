@@ -23,24 +23,42 @@
 
   <!-- Music -->
   <section class="music-container container g-glassmorphism">
-    <div class="music-content">
-      <div class="album-art">
-        <img src="assets/img/JuiceWLRD.webp" alt="Outro">
-      </div>
-      <div class="song-info">
-        <h3>Empty</h3>
-        <p>Juice WRLD</p>
-      </div>
+    @if (media) {
+      <div class="music-content">
+        <div class="album-art">
+          <img [src]="media.artworkLarge" [alt]="media.title">
+        </div>
+        <div class="song-info">
+          <h3>{{ media.title }}</h3>
+          <p>{{ media.subtitle }}</p>
+        </div>
 
-      <div class="controls">
-        <fa-icon [icon]="['fas','step-backward']"/>
-        <fa-icon [icon]="['fas','play']"/>
-        <fa-icon [icon]="['fas','step-forward']"/>
-      </div>
+        <div class="controls">
+          <fa-icon [icon]="['fas','step-backward']"/>
+          <fa-icon
+            [icon]="['fas', isPlaying ? 'pause' : 'play']"
+            (click)="togglePlay()"
+          />
+          <fa-icon [icon]="['fas','step-forward']"/>
+        </div>
 
-      <div class="progress-bar">
-        <div class="progress"></div>
+        <div
+          #progressBar
+          class="progress-bar"
+          (pointerdown)="onScrubStart($event)"
+          [class.is-dragging]="isDragging"
+        >
+          <div class="progress" [style.width.%]="progressPercent()">
+            <span class="handle"></span>
+          </div>
+        </div>
       </div>
-    </div>
+    } @else {
+      <button type="button" class="music-placeholder" (click)="goToMusic()">
+        <fa-icon [icon]="['fas','music']" />
+        <span class="placeholder-title">Pulsa para acceder a música</span>
+        <span class="placeholder-hint">Elige una canción para empezar</span>
+      </button>
+    }
   </section>
 </main>

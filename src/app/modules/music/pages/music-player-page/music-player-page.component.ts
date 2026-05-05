@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { MusicService } from '../../services/music.service';
-import { MusicTrack } from '../../types/music.type';
+import { MediaPlayerService } from '@shared/services/media-player.service';
+import { MediaItem } from '@shared/types/media.type';
 
 @Component({
   selector: 'music-player-page',
@@ -10,16 +12,17 @@ import { MusicTrack } from '../../types/music.type';
   styleUrl: './music-player-page.component.scss',
 })
 export class MusicPlayerPageComponent implements OnInit, OnDestroy {
-  track: MusicTrack | null = null;
-  isPlaying = true;
-  progressMs = 1000;
-  private audio?: HTMLAudioElement;
-  private timer?: number;
+  media: MediaItem | null = null;
+  isPlaying = false;
+  progressMs = 0;
+
+  private subscriptions = new Subscription();
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private musicService: MusicService,
+    private mediaPlayer: MediaPlayerService,
   ) {}
 
   ngOnInit(): void {
@@ -28,36 +31,41 @@ export class MusicPlayerPageComponent implements OnInit, OnDestroy {
       this.router.navigate(['/music', 'home']);
       return;
     }
+
+    this.subscriptions.add(
+      this.mediaPlayer.getCurrentMedia().subscribe((media) => (this.media = media)),
+    );
+    this.subscriptions.add(
+      this.mediaPlayer.getIsPlaying().subscribe((playing) => (this.isPlaying = playing)),
+    );
+    this.subscriptions.add(
+      this.mediaPlayer.getProgress().subscribe((ms) => (this.progressMs = ms)),
+    );
+
+    if (this.mediaPlayer.currentMediaValue?.id === id) return;
+
     const cached = this.musicService.getTrackById(id);
     if (cached) {
-      this.track = cached;
-      this.startPreview();
-    } else {
-      this.musicService.getTopPicks().subscribe({
-        next: () => {
-          this.track = this.musicService.getTrackById(id) ?? null;
-          if (!this.track) {
-            this.router.navigate(['/music', 'home']);
-            return;
-          }
-          this.startPreview();
-        },
-      });
+      this.musicService.playTrack(cached);
+      return;
     }
+
+    this.musicService.getTopPicks().subscribe(() => {
+      const track = this.musicService.getTrackById(id);
+      if (!track) {
+        this.router.navigate(['/music', 'home']);
+        return;
+      }
+      this.musicService.playTrack(track);
+    });
   }
 
   ngOnDestroy(): void {
-    this.stopPreview();
+    this.subscriptions.unsubscribe();
   }
 
   togglePlay(): void {
-    if (!this.audio) return;
-    if (this.isPlaying) {
-      this.audio.pause();
-    } else {
-      this.audio.play().catch(() => {});
-    }
-    this.isPlaying = !this.isPlaying;
+    this.mediaPlayer.toggle();
   }
 
   back(): void {
@@ -72,53 +80,13 @@ export class MusicPlayerPageComponent implements OnInit, OnDestroy {
   }
 
   formatRemaining(): string {
-    if (!this.track) return '0:00';
-    const remaining = Math.max(0, this.track.durationMs - this.progressMs);
+    if (!this.media) return '0:00';
+    const remaining = Math.max(0, this.media.durationMs - this.progressMs);
     return `-${this.formatTime(remaining)}`;
   }
 
   progressPercent(): number {
-    if (!this.track || !this.track.durationMs) return 0;
-    return Math.min(100, (this.progressMs / this.track.durationMs) * 100);
-  }
-
-  private startPreview(): void {
-    if (!this.track?.previewUrl) {
-      this.startTimer();
-      return;
-    }
-    this.audio = new Audio(this.track.previewUrl);
-    this.audio.play().catch(() => {
-      this.isPlaying = false;
-    });
-    this.audio.addEventListener('timeupdate', () => {
-      if (this.audio) this.progressMs = this.audio.currentTime * 1000;
-    });
-    this.audio.addEventListener('ended', () => {
-      this.isPlaying = false;
-    });
-  }
-
-  private startTimer(): void {
-    this.timer = window.setInterval(() => {
-      if (!this.isPlaying || !this.track) return;
-      this.progressMs += 1000;
-      if (this.progressMs >= this.track.durationMs) {
-        this.progressMs = this.track.durationMs;
-        this.isPlaying = false;
-      }
-    }, 1000);
-  }
-
-  private stopPreview(): void {
-    if (this.audio) {
-      this.audio.pause();
-      this.audio.src = '';
-      this.audio = undefined;
-    }
-    if (this.timer) {
-      window.clearInterval(this.timer);
-      this.timer = undefined;
-    }
+    if (!this.media || !this.media.durationMs) return 0;
+    return Math.min(100, (this.progressMs / this.media.durationMs) * 100);
   }
 }

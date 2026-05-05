@@ -18,7 +18,7 @@ export class MusicCardComponent {
   ) {}
 
   play(): void {
-    this.musicService.selectTrack(this.track);
+    this.musicService.playTrack(this.track);
     this.router.navigate(['/music', 'player', this.track.id]);
   }
 

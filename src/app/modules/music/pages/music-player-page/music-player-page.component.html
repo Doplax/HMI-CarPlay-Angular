@@ -1,7 +1,7 @@
-@if (track) {
+@if (media) {
   <div
     class="player"
-    [style.background-image]="'url(' + track.artworkLarge + ')'"
+    [style.background-image]="'url(' + media.artworkLarge + ')'"
   >
     <div class="player__overlay"></div>
 
@@ -12,9 +12,9 @@
 
       <div class="player__body">
         <div class="player__info">
-          <div class="title">{{ track.title }}</div>
-          <div class="artist">{{ track.artist }}</div>
-          <div class="album">{{ track.album }}</div>
+          <div class="title">{{ media.title }}</div>
+          <div class="artist">{{ media.subtitle }}</div>
+          <div class="album">{{ media.album }}</div>
 
           <div class="progress">
             <div class="progress__bar">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="player__artwork">
-          <img [src]="track.artworkLarge" [alt]="track.title" />
+          <img [src]="media.artworkLarge" [alt]="media.title" />
         </div>
       </div>
     </div>
