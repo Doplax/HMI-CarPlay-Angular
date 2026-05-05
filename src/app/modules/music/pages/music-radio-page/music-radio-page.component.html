@@ -1,6 +1,6 @@
 <main class="music-list-page">
-  @if (loading) {
-    <div class="state">Loading...</div>
+  @if (isLoading) {
+    <shared-loader />
   } @else if (error) {
     <div class="state error">Could not load tracks. Check your connection.</div>
   } @else {

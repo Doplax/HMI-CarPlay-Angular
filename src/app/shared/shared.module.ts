@@ -11,6 +11,7 @@ import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import {
   TitleSectionComponent,
   LockScreenComponent,
+  LoaderComponent,
   VolumeBoxComponent,
   TopBarComponent,
   SideBarComponent,
@@ -22,6 +23,7 @@ import {
     //Components
     TitleSectionComponent,
     LockScreenComponent,
+    LoaderComponent,
     VolumeBoxComponent,
     TopBarComponent,
     SideBarComponent,
@@ -39,6 +41,7 @@ import {
     //Components
     TitleSectionComponent,
     LockScreenComponent,
+    LoaderComponent,
     VolumeBoxComponent,
     TopBarComponent,
     SideBarComponent,

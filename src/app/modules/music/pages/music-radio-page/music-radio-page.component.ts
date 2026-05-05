@@ -10,7 +10,7 @@ import { MusicTrack } from '../../types/music.type';
 })
 export class MusicRadioPageComponent implements OnInit {
   tracks: MusicTrack[] = [];
-  loading = true;
+  isLoading = true;
   error = false;
 
   constructor(private musicService: MusicService) {}
@@ -19,10 +19,10 @@ export class MusicRadioPageComponent implements OnInit {
     this.musicService.getRadio().subscribe({
       next: (tracks) => {
         this.tracks = tracks;
-        this.loading = false;
+        this.isLoading = false;
       },
       error: () => {
-        this.loading = false;
+        this.isLoading = false;
         this.error = true;
       },
     });
