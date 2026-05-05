@@ -1,0 +1,94 @@
+@use 'variables' as vars;
+
+.music-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: vars.$card-border-radius;
+  margin-bottom: 8px;
+  background: vars.$basic-grey;
+  transition: background 0.2s;
+  min-height: vars.$card-min-height;
+
+  &:hover {
+    background: vars.$highlighted-blue;
+    cursor: pointer;
+
+    .artwork .play-overlay {
+      opacity: 1;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+    flex: 1;
+
+    .artwork {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: vars.$background-color;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .play-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.45);
+        color: white;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+
+    .labels {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+
+      .title {
+        font-size: vars.$card-primary-text-size;
+        font-weight: 600;
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .subtitle {
+        font-size: vars.$card-secondary-text-size;
+        color: white;
+        font-weight: 300;
+        margin-top: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .right {
+    color: white;
+    font-size: vars.$font-size-body;
+    font-weight: 300;
+    margin-left: 12px;
+  }
+}

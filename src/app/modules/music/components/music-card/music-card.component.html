@@ -1,0 +1,15 @@
+<div class="music-card" (click)="play()">
+  <div class="left">
+    <div class="artwork">
+      <img [src]="track.artwork" [alt]="track.title" />
+      <div class="play-overlay">
+        <fa-icon [icon]="['fas', 'play']" />
+      </div>
+    </div>
+    <div class="labels">
+      <div class="title">{{ track.title }}</div>
+      <div class="subtitle">{{ track.artist }} &middot; {{ track.album }}</div>
+    </div>
+  </div>
+  <div class="right">{{ formatDuration(track.durationMs) }}</div>
+</div>

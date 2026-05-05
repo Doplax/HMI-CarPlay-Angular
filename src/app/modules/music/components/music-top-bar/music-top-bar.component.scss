@@ -1,0 +1,44 @@
+@use 'variables' as vars;
+
+nav {
+  padding: 0 20px 12px 20px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      color: vars.$icon-color;
+      transition: color 0.2s ease;
+      padding: 8px 16px;
+      border-radius: 12px;
+
+      fa-icon {
+        font-size: 1.6rem;
+      }
+
+      .label {
+        font-size: vars.$font-size-body;
+        font-weight: 500;
+      }
+
+      &:hover {
+        color: white;
+      }
+
+      &.active {
+        color: vars.$highlighted-blue;
+      }
+    }
+  }
+}

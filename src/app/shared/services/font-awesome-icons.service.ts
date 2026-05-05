@@ -23,12 +23,17 @@ import {
   faChevronLeft,
   faStepBackward,
   faPlay,
+  faPause,
   faStepForward,
   faBed,
   faMap,
   faCheckCircle,
   faLayerGroup,
   faCheck,
+  faHouse,
+  faCompactDisc,
+  faTowerBroadcast,
+  faRecordVinyl,
 } from '@fortawesome/free-solid-svg-icons';
 
 //?HTML Exapmle
@@ -57,12 +62,17 @@ const icons = [
   faChevronLeft,
   faStepBackward,
   faPlay,
+  faPause,
   faStepForward,
   faBed,
   faMap,
   faCheckCircle,
   faLayerGroup,
   faCheck,
+  faHouse,
+  faCompactDisc,
+  faTowerBroadcast,
+  faRecordVinyl,
 ];
 
 @Injectable({
