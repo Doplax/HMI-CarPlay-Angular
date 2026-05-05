@@ -46,3 +46,42 @@ button {
   outline: none;
   border: none;
 }
+
+// Route transitions (View Transitions API)
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+// Clip the slide so it stays within the original element box (the car screen).
+::view-transition-group(home-content),
+::view-transition-image-pair(home-content) {
+  overflow: hidden;
+}
+
+@keyframes route-slide-from-right {
+  from { transform: translateX(100%); }
+}
+@keyframes route-slide-to-left {
+  to { transform: translateX(-100%); }
+}
+@keyframes route-slide-from-left {
+  from { transform: translateX(-100%); }
+}
+@keyframes route-slide-to-right {
+  to { transform: translateX(100%); }
+}
+
+html.route-forward::view-transition-old(home-content) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both route-slide-to-left;
+}
+html.route-forward::view-transition-new(home-content) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both route-slide-from-right;
+}
+
+html.route-backward::view-transition-old(home-content) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both route-slide-to-right;
+}
+html.route-backward::view-transition-new(home-content) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both route-slide-from-left;
+}

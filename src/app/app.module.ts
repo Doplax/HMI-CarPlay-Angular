@@ -1,9 +1,9 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ActivatedRouteSnapshot, provideRouter, withViewTransitions } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+import { appRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {
   provideHttpClient,
@@ -11,23 +11,41 @@ import {
 } from '@angular/common/http';
 import { SharedModule } from '@shared/shared.module';
 
-//Locale
-//import localeES from '@angular/common/locales/es';
-//import localeEN from '@angular/common/locales/en';
-
-//import { registerLocaleData } from '@angular/common';
-//import { CurrentStateService } from './shared/services/current-state.service';
-//import { I18nService } from './shared/services/i18n.service';
-//registerLocaleData(localeES);
-//registerLocaleData(localeEN);
+function findAnimationIndex(snapshot: ActivatedRouteSnapshot): number | undefined {
+  let current: ActivatedRouteSnapshot | null = snapshot;
+  while (current) {
+    const value = current.data?.['animationIndex'];
+    if (typeof value === 'number') return value;
+    current = current.firstChild;
+  }
+  return undefined;
+}
 
 @NgModule({
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule, SharedModule],
+  imports: [BrowserModule, FontAwesomeModule, SharedModule],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
-    //{ provide: LOCALE_ID, useValue: I18nService.currentLang },
+    provideRouter(
+      appRoutes,
+      withViewTransitions({
+        skipInitialTransition: true,
+        onViewTransitionCreated: ({ transition, from, to }) => {
+          const fromIdx = findAnimationIndex(from);
+          const toIdx = findAnimationIndex(to);
+          if (fromIdx === undefined || toIdx === undefined || fromIdx === toIdx) {
+            transition.skipTransition();
+            return;
+          }
+          const direction = toIdx > fromIdx ? 'route-forward' : 'route-backward';
+          document.documentElement.classList.add(direction);
+          transition.finished.finally(() => {
+            document.documentElement.classList.remove(direction);
+          });
+        },
+      }),
+    ),
   ],
 })
 export class AppModule {}
