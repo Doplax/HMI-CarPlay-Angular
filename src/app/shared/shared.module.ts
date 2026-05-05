@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
@@ -31,7 +32,8 @@ import {
   imports: [
     CommonModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports: [
     //Components
@@ -46,7 +48,8 @@ import {
 
     //Modules
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
 })
 export class SharedModule {}

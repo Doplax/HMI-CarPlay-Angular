@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CallRoutingModule } from './call-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from '@shared/shared.module';
 
 // Pages
 import { CallContactsPageComponent } from './pages/call-contacts-page/call-contacts-page.component';
@@ -12,7 +13,6 @@ import { CallLayoutComponent } from './layout/call-layout.component';
 import { CallFavoritesPageComponent  } from './pages/call-favorites-page/call-favorites-page.component';
 
 //Components
-import { CallTopBarComponent } from './components/call-top-bar/call-top-bar.component';
 import { CallCardComponent } from './components/call-card/call-card.component';
 
 @NgModule({
@@ -27,14 +27,14 @@ import { CallCardComponent } from './components/call-card/call-card.component';
     CallVoicemalPageComponent,
 
     //Components
-    CallTopBarComponent,
     CallCardComponent
 
   ],
   imports: [
     CommonModule,
     CallRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
 })
 export class CallModule {}

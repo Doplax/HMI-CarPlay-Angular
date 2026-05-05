@@ -1,1 +1,13 @@
-<p>top-bar works!</p>
+<nav class="top-bar">
+  <ul>
+    @for (tab of tabs; track tab.path) {
+      <li
+        [routerLink]="tab.path"
+        [routerLinkActive]="['active']"
+      >
+        <fa-icon [icon]="[tab.iconPrefix ?? 'fas', tab.icon]" />
+        <span class="label">{{ i18n.translate(tab.labelKey) }}</span>
+      </li>
+    }
+  </ul>
+</nav>

@@ -13,7 +13,6 @@ import { MusicLibraryPageComponent } from './pages/music-library-page/music-libr
 import { MusicPlayerPageComponent } from './pages/music-player-page/music-player-page.component';
 
 // Components
-import { MusicTopBarComponent } from './components/music-top-bar/music-top-bar.component';
 import { MusicCardComponent } from './components/music-card/music-card.component';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { MusicCardComponent } from './components/music-card/music-card.component
     MusicRadioPageComponent,
     MusicLibraryPageComponent,
     MusicPlayerPageComponent,
-    MusicTopBarComponent,
     MusicCardComponent,
   ],
   imports: [CommonModule, RouterModule, MusicRoutingModule, SharedModule],

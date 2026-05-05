@@ -34,6 +34,11 @@ import {
   faCompactDisc,
   faTowerBroadcast,
   faRecordVinyl,
+  faStar,
+  faClock,
+  faAddressBook,
+  faTableCellsLarge,
+  faVoicemail,
 } from '@fortawesome/free-solid-svg-icons';
 
 //?HTML Exapmle
@@ -73,6 +78,11 @@ const icons = [
   faCompactDisc,
   faTowerBroadcast,
   faRecordVinyl,
+  faStar,
+  faClock,
+  faAddressBook,
+  faTableCellsLarge,
+  faVoicemail,
 ];
 
 @Injectable({

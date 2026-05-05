@@ -1,1 +1,8 @@
-{ "TITLE": "Call"}
+{
+  "TITLE": "Call",
+  "TAB_FAVORITES": "Favorites",
+  "TAB_RECENTS": "Recents",
+  "TAB_CONTACTS": "Contacts",
+  "TAB_KEYPAD": "Keypad",
+  "TAB_VOICEMAIL": "Voicemail"
+}
