@@ -65,6 +65,8 @@ export class SettingsService {
 
   lightMode: boolean = false;
 
+  temperatureUnit: 'C' | 'F' = 'C';
+
   latitude: number | null = null;  // <-- store latitude in the service
   longitude: number | null = null; // <-- store longitude in the service
 
@@ -81,6 +83,15 @@ export class SettingsService {
 
   switchLightMode(): boolean {
     return this.lightMode = !this.lightMode;
+  }
+
+  // TEMPERATURE UNIT
+  getTemperatureUnit(): 'C' | 'F' {
+    return this.temperatureUnit;
+  }
+
+  switchTemperatureUnit(): 'C' | 'F' {
+    return this.temperatureUnit = this.temperatureUnit === 'C' ? 'F' : 'C';
   }
 
   // LOCATION

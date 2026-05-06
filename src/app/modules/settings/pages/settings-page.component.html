@@ -40,6 +40,28 @@
       </div>
     </a>
 
+    <!-- WEATHER UNIT CARD -->
+    <div class="option">
+      <div class="left-section">
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'temperature-half']" class="option-icon"></fa-icon>
+        </div>
+        <span>Tiempo</span>
+      </div>
+
+      <div class="right-section">
+        <span>°C</span>
+        <label class="switch">
+          <input type="checkbox"
+            [checked]="settingsService.getTemperatureUnit() === 'F'"
+            (change)="settingsService.switchTemperatureUnit()"
+          />
+          <span class="slider"></span>
+        </label>
+        <span>°F</span>
+      </div>
+    </div>
+
     <!-- ASPECTO CARD -->
     <div class="option">
       <div class="left-section">
