@@ -1,5 +1,11 @@
 <div class="maps-page">
   <div id="map" #map></div>
 
-  <maps-navigation-controllers/>
+  <maps-navigation-controllers
+    [is3dActive]="is3dActive"
+    (recenter)="onRecenter()"
+    (zoomIn)="onZoomIn()"
+    (zoomOut)="onZoomOut()"
+    (toggle3d)="onToggle3d()"
+  />
 </div>

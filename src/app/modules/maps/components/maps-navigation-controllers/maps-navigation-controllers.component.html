@@ -1,36 +1,36 @@
 <div class="maps-navigation-controllers">
   <div class="top-container">
-    <!-- Flecha -->
-     <div>
-       <fa-icon [icon]="['fas','location-arrow']"/>
-     </div>
+    <!-- Recentrar -->
+    <div (click)="recenter.emit()" title="Centrar en mi ubicación">
+      <fa-icon [icon]="['fas','location-arrow']"/>
+    </div>
 
     <!-- 3D -->
-     <div class="button-3d">
+    <div class="button-3d" (click)="toggle3d.emit()" [class.active]="is3dActive" title="Vista 3D">
       <span>3D</span>
-     </div>
+    </div>
   </div>
 
   <div class="middle-container">
-    <div>
+    <div title="Reportar incidencia">
       <fa-icon [icon]="['fas','triangle-exclamation']"/>
     </div>
   </div>
 
 
   <div class="bottom-container">
-    <!-- Arrows -->
-    <div>
+    <!-- Recentrar (mover) -->
+    <div (click)="recenter.emit()" title="Centrar en mi ubicación">
       <fa-icon [icon]="['fas','arrows-up-down-left-right']"/>
     </div>
 
     <!-- Zoom In -->
-    <div>
+    <div (click)="zoomIn.emit()" title="Acercar">
       <fa-icon [icon]="['fas','plus']"/>
     </div>
 
     <!-- Zoom Out -->
-    <div>
+    <div (click)="zoomOut.emit()" title="Alejar">
       <fa-icon [icon]="['fas','minus']"/>
     </div>
   </div>
