@@ -1,15 +1,19 @@
-import { Injectable, OnDestroy } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable, OnDestroy, inject } from '@angular/core';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { MediaItem } from '@shared/types/media.type';
+import { VolumeService } from './volume.service';
 
 @Injectable({ providedIn: 'root' })
 export class MediaPlayerService implements OnDestroy {
+  private volumeService = inject(VolumeService);
+
   private currentMedia$ = new BehaviorSubject<MediaItem | null>(null);
   private isPlaying$ = new BehaviorSubject<boolean>(false);
   private progressMs$ = new BehaviorSubject<number>(0);
 
   private audio: HTMLAudioElement = new Audio();
   private fallbackTimer?: number;
+  private volumeSubscription: Subscription;
 
   constructor() {
     this.audio.preload = 'metadata';
@@ -27,10 +31,17 @@ export class MediaPlayerService implements OnDestroy {
     this.audio.addEventListener('play', () => {
       this.isPlaying$.next(true);
     });
+
+    this.volumeSubscription = this.volumeService.volumeLevel$.subscribe(
+      (level) => {
+        this.audio.volume = Math.max(0, Math.min(1, level / 100));
+      }
+    );
   }
 
   ngOnDestroy(): void {
     this.stop();
+    this.volumeSubscription.unsubscribe();
   }
 
   getCurrentMedia(): Observable<MediaItem | null> {
