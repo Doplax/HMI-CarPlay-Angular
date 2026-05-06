@@ -9,62 +9,23 @@
 }
 
 .map-style-page {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto;
 
   .map-preview-container {
     position: relative;
-    flex: 0 0 40%;
+    height: 280px;
     background-color: #1a1a1a;
 
     .map-preview {
       height: 100%;
       width: 100%;
     }
-
-    .save-button-wrapper {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      z-index: 10;
-    }
-
-    .save-button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background-color: vars.$highlighted-blue;
-      color: #000;
-      border: none;
-      border-radius: vars.$card-border-radius;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-
-      fa-icon {
-        font-size: 16px;
-      }
-    }
   }
 
   .styles-container {
-    flex: 1 1 auto;
-    overflow-y: auto;
     padding: 20px 10px;
 
     .styles-group {
@@ -172,10 +133,9 @@
   }
 }
 
-// Custom scrollbar for styles container
-.styles-container {
+.map-style-page {
   scrollbar-width: thin;
-  scrollbar-color: rgba(100, 210, 255, 0.3) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -186,11 +146,15 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(100, 210, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
 
     &:hover {
-      background: rgba(100, 210, 255, 0.5);
+      background: rgba(255, 255, 255, 0.35);
     }
   }
+}
+
+.styles-container {
+  padding-bottom: 20px;
 }

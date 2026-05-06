@@ -1,8 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import * as L from 'leaflet';
+import { environment } from '../../../../environments/environment';
 import { MapProviderService, MapStyle } from '../services/map-provider.service';
-import { SettingsService } from '../services/settings-service.service';
 
 @Component({
   selector: 'settings-map-style-page',
@@ -21,11 +20,7 @@ export class SettingsMapStylePageComponent implements OnInit, AfterViewInit {
   mapCenter: [number, number] = [40.4168, -3.7038]; // Madrid
   mapZoom: number = 11;
 
-  constructor(
-    private mapProviderService: MapProviderService,
-    private settingsService: SettingsService,
-    private router: Router
-  ) {}
+  constructor(private mapProviderService: MapProviderService) {}
 
   ngOnInit(): void {
     this.currentStyle = this.mapProviderService.getStyle();
@@ -47,33 +42,53 @@ export class SettingsMapStylePageComponent implements OnInit, AfterViewInit {
   selectStyle(style: MapStyle): void {
     this.currentStyle = style;
     this.updateMapStyle(style);
+    this.mapProviderService.setStyle(style);
   }
 
   private updateMapStyle(style: MapStyle): void {
     if (!this.map) return;
 
-    // Remove existing tile layers
     this.map.eachLayer((layer) => {
       if (layer instanceof L.TileLayer) {
         this.map!.removeLayer(layer);
       }
     });
 
-    // Add new tile layer for leaflet styles
-    if (style.provider === 'leaflet' && style.tileUrl) {
-      L.tileLayer(style.tileUrl, {
-        attribution: style.attribution,
-        maxZoom: 19
-      }).addTo(this.map);
+    const tileUrl = this.resolveTileUrl(style);
+    if (!tileUrl) return;
+
+    const options: L.TileLayerOptions = {
+      attribution: style.attribution,
+      maxZoom: 19
+    };
+    if (style.provider === 'mapbox') {
+      options.tileSize = 512;
+      options.zoomOffset = -1;
     }
+    L.tileLayer(tileUrl, options).addTo(this.map);
   }
 
-  saveStyle(): void {
-    this.mapProviderService.setStyle(this.currentStyle);
-    this.router.navigate(['/settings/location']);
+  private resolveTileUrl(style: MapStyle): string | null {
+    if (style.provider === 'leaflet') {
+      return style.tileUrl ?? null;
+    }
+    if (style.provider === 'mapbox' && style.mapboxStyle) {
+      const styleId = style.mapboxStyle.replace('mapbox://styles/', '');
+      return `https://api.mapbox.com/styles/v1/${styleId}/tiles/512/{z}/{x}/{y}@2x?access_token=${environment.mapbox_key}`;
+    }
+    return null;
   }
 
   isSelected(style: MapStyle): boolean {
     return this.currentStyle.id === style.id;
+  }
+
+  getThumbnail(style: MapStyle): string | null {
+    if (style.thumbnail) return style.thumbnail;
+    if (style.provider === 'mapbox' && style.mapboxStyle) {
+      const styleId = style.mapboxStyle.replace('mapbox://styles/', '');
+      return `https://api.mapbox.com/styles/v1/${styleId}/tiles/256/4/8/5?access_token=${environment.mapbox_key}`;
+    }
+    return null;
   }
 }

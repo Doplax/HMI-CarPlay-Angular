@@ -1,14 +1,6 @@
 <div class="map-style-page">
-  <!-- Map Preview Section (Sticky) -->
   <div class="map-preview-container">
     <div id="map-preview" #mapPreview class="map-preview"></div>
-
-    <div class="save-button-wrapper">
-      <button class="save-button" (click)="saveStyle()">
-        <fa-icon [icon]="['fas', 'check']"></fa-icon>
-        Guardar
-      </button>
-    </div>
   </div>
 
   <!-- Styles Selection Section -->
@@ -50,9 +42,13 @@
           <div class="style-card"
                [class.selected]="isSelected(style)"
                (click)="selectStyle(style)">
-            <div class="style-thumbnail-placeholder">
-              <fa-icon [icon]="['fas', 'map']"></fa-icon>
-            </div>
+            @if (getThumbnail(style); as thumb) {
+              <img [src]="thumb" alt="{{ style.name }}" class="style-thumbnail">
+            } @else {
+              <div class="style-thumbnail-placeholder">
+                <fa-icon [icon]="['fas', 'map']"></fa-icon>
+              </div>
+            }
             <div class="style-info">
               <p class="style-name">{{ style.name }}</p>
               <p class="style-provider">Mapbox</p>

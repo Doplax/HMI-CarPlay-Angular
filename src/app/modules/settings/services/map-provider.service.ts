@@ -34,7 +34,7 @@ export class MapProviderService {
       provider: 'leaflet',
       tileUrl: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
       attribution: '© OpenStreetMap contributors, © HOT',
-      thumbnail: undefined
+      thumbnail: 'https://a.tile.openstreetmap.fr/hot/4/8/5.png'
     },
     {
       id: 'cartodb-light',
