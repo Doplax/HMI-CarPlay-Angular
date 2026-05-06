@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 import { TranslatePipe } from '@shared/pipes/translate.pipe';
@@ -10,6 +11,7 @@ import { TranslatePipe } from '@shared/pipes/translate.pipe';
 import {
   TitleSectionComponent,
   LockScreenComponent,
+  LoaderComponent,
   VolumeBoxComponent,
   TopBarComponent,
   SideBarComponent,
@@ -21,6 +23,7 @@ import {
     //Components
     TitleSectionComponent,
     LockScreenComponent,
+    LoaderComponent,
     VolumeBoxComponent,
     TopBarComponent,
     SideBarComponent,
@@ -31,12 +34,14 @@ import {
   imports: [
     CommonModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports: [
     //Components
     TitleSectionComponent,
     LockScreenComponent,
+    LoaderComponent,
     VolumeBoxComponent,
     TopBarComponent,
     SideBarComponent,
@@ -46,7 +51,8 @@ import {
 
     //Modules
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
 })
 export class SharedModule {}

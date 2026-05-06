@@ -1,0 +1,20 @@
+@use 'variables' as vars;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.music-list-page {
+  padding: 0 20px 20px 20px;
+
+  .state {
+    color: vars.$icon-color;
+    font-size: vars.$font-size-body;
+    padding: 40px 8px;
+
+    &.error {
+      color: white;
+    }
+  }
+}

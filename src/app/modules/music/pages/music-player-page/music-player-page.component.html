@@ -1,0 +1,48 @@
+@if (media) {
+  <div
+    class="player"
+    [style.background-image]="'url(' + media.artworkLarge + ')'"
+  >
+    <div class="player__overlay"></div>
+
+    <div class="player__content">
+      <button class="back-btn" (click)="back()" aria-label="Back">
+        <fa-icon [icon]="['fas', 'chevron-left']" />
+      </button>
+
+      <div class="player__body">
+        <div class="player__info">
+          <div class="title">{{ media.title }}</div>
+          <div class="artist">{{ media.subtitle }}</div>
+          <div class="album">{{ media.album }}</div>
+
+          <div class="progress">
+            <div class="progress__bar">
+              <div class="progress__fill" [style.width.%]="progressPercent()"></div>
+            </div>
+            <div class="progress__times">
+              <span>{{ formatTime(progressMs) }}</span>
+              <span>{{ formatRemaining() }}</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="control" aria-label="Previous">
+              <fa-icon [icon]="['fas', 'step-backward']" />
+            </button>
+            <button class="control control--play" (click)="togglePlay()" aria-label="Play/Pause">
+              <fa-icon [icon]="['fas', isPlaying ? 'pause' : 'play']" />
+            </button>
+            <button class="control" aria-label="Next">
+              <fa-icon [icon]="['fas', 'step-forward']" />
+            </button>
+          </div>
+        </div>
+
+        <div class="player__artwork">
+          <img [src]="media.artworkLarge" [alt]="media.title" />
+        </div>
+      </div>
+    </div>
+  </div>
+}

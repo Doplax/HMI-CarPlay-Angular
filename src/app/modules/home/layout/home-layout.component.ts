@@ -5,7 +5,7 @@ import { I18nService } from '@shared/services/i18n.service';
     selector: 'home-layout',
     templateUrl: './home-layout.component.html',
     styleUrls: ['./home-layout.component.scss'],
-    standalone: false
+    standalone: false,
 })
 export class HomeLayoutComponent {
 

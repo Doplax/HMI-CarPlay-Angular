@@ -25,30 +25,40 @@
     </div>
 
     <!-- LOCATION CARD -->
+    <a routerLink="/settings/location" class="option-link">
+      <div class="option">
+        <div class="left-section">
+          <div class="icon-container">
+            <fa-icon [icon]="['fas', 'location-dot']" class="option-icon"></fa-icon>
+          </div>
+          <span>Location</span>
+        </div>
+
+        <div class="right-section">
+          <fa-icon [icon]="['fas', 'chevron-right']" class="option-icon"></fa-icon>
+        </div>
+      </div>
+    </a>
+
+    <!-- WEATHER UNIT CARD -->
     <div class="option">
       <div class="left-section">
         <div class="icon-container">
-          <fa-icon [icon]="['fas', 'location-dot']" class="option-icon"></fa-icon>
+          <fa-icon [icon]="['fas', 'temperature-half']" class="option-icon"></fa-icon>
         </div>
-        <span>Location</span>
+        <span>Tiempo</span>
       </div>
 
       <div class="right-section">
-        <!-- TODO: Poner la localización en forma de ciudad -->
-         
-        <!--<span>Lat: {{ settingsService.latitude | number:'1.2-2'}} </span>
-        <span>{{'  '}}</span>
-        <span>Long: {{ settingsService.longitude | number:'1.2-2'}}</span>-->
-
-        <!-- Toggle Switch -->
-        <!--<label class="switch">
-          <select [(ngModel)]="selectedProvince">
-            <option value="">Select a province</option>
-            @for (province of provinces; track $index) {
-              <option [value]="province">{{ province }} </option>
-            }
-          </select>
-        </label>-->
+        <span>°C</span>
+        <label class="switch">
+          <input type="checkbox"
+            [checked]="settingsService.getTemperatureUnit() === 'F'"
+            (change)="settingsService.switchTemperatureUnit()"
+          />
+          <span class="slider"></span>
+        </label>
+        <span>°F</span>
       </div>
     </div>
 

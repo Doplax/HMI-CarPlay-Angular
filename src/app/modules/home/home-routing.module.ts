@@ -12,13 +12,16 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomePageComponent
+        component: HomePageComponent,
+        data: { animationIndex: 1 },
       },
       {
         path: 'split',
-        component: SplitViewPageComponent
-      }
-  ]},
+        component: SplitViewPageComponent,
+        data: { animationIndex: 0 },
+      },
+    ],
+  },
 ];
 
 @NgModule({

@@ -1,10 +1,12 @@
 <main class="g-layout">
 
   <div class="head-section">
-    <shared-title-section [title]="this.i18n.translate('TITLE')" />
+    <shared-title-section [title]="i18n.translate('TITLE')" />
+    <shared-top-bar [tabs]="tabs"/>
   </div>
 
   <div class="body-section">
     <router-outlet/>
   </div>
+
 </main>

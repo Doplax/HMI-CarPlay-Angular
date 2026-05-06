@@ -1,1 +1,7 @@
-{ "TITLE": "Musica"}
+{
+  "TITLE": "Musica",
+  "TAB_HOME": "Inicio",
+  "TAB_NEW": "Nuevo",
+  "TAB_RADIO": "Radio",
+  "TAB_LIBRARY": "Biblioteca"
+}

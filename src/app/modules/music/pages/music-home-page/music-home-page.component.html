@@ -1,0 +1,11 @@
+<main class="music-list-page">
+  @if (isLoading) {
+    <shared-loader />
+  } @else if (error) {
+    <div class="state error">Could not load tracks. Check your connection.</div>
+  } @else {
+    @for (track of tracks; track track.id) {
+      <music-card [track]="track" />
+    }
+  }
+</main>

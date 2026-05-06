@@ -18,6 +18,7 @@
     background-color: black;
     height: 100%;
     width: 80px;
+    flex: 0 0 80px;
     display: flex;
     justify-content: center;
   }
@@ -33,6 +34,13 @@
     height: 650px;
     width: 1170px;
     background-color: vars.$background-color;
+  }
+
+  .content {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
   }
 
   footer {

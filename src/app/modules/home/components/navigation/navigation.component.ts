@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter } from 'rxjs';
 
 @Component({
   selector: 'home-navigation',
@@ -7,35 +8,45 @@ import { Router } from '@angular/router';
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {
-  constructor(private router: Router) {}
-
+export class NavigationComponent implements OnInit, OnDestroy {
   icons = [0, 1];
   activeIndex = 1;
 
-  ngOnInit() {
-    if (this.router.url === '/home/split') {
-      this.activeIndex = 0;
-    } else if (this.router.url === '/home') {
-      this.activeIndex = 1;
-    }
+  private routerSubscription?: Subscription;
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.syncActiveIndex(this.router.url);
+    this.routerSubscription = this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe((event) => this.syncActiveIndex(event.urlAfterRedirects));
   }
 
-  prevIcon() {
+  ngOnDestroy(): void {
+    this.routerSubscription?.unsubscribe();
+  }
+
+  prevIcon(): void {
     if (this.activeIndex > 0) {
       this.activeIndex--;
-    this.navigate();
+      this.navigate();
     }
   }
 
-  nextIcon() {
+  nextIcon(): void {
     if (this.activeIndex < this.icons.length - 1) {
       this.activeIndex++;
       this.navigate();
     }
   }
 
-  navigate() {
+  onIconClick(index: number): void {
+    this.activeIndex = index;
+    this.navigate();
+  }
+
+  private navigate(): void {
     if (this.activeIndex === 1) {
       this.router.navigate(['home']);
     } else if (this.activeIndex === 0) {
@@ -43,8 +54,11 @@ export class NavigationComponent {
     }
   }
 
-  onIconClick(index: number) {
-    this.activeIndex = index;
-    this.navigate();
+  private syncActiveIndex(url: string): void {
+    if (url.startsWith('/home/split')) {
+      this.activeIndex = 0;
+    } else if (url.startsWith('/home')) {
+      this.activeIndex = 1;
+    }
   }
 }

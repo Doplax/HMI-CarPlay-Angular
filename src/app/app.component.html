@@ -11,7 +11,7 @@
       @if (isRunning) {
         <router-outlet/>
       } @else {
-        <app-lock-screen/>
+        <app-lock-screen animate.enter="lock-screen-fade-in" animate.leave="lock-screen-fade-out"/>
       }
     </div>
   </div>

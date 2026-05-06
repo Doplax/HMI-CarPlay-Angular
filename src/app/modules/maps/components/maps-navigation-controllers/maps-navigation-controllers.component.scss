@@ -54,6 +54,11 @@
     font-size: 20px;
     font-weight: 400;
   }
+
+  &.active {
+    background-color: vars.$highlighted-blue !important;
+    color: #fff !important;
+  }
 }
 
 fa-icon ::ng-deep {

@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
-const routes: Routes = [
+export const appRoutes: Routes = [
   {
     path: '',
     redirectTo: 'home',
@@ -58,9 +57,3 @@ const routes: Routes = [
       import('@modules/podcast/podcast.module').then((m) => m.PodcastModule),
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

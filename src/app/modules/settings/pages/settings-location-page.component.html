@@ -1,0 +1,47 @@
+<div class="settings-page">
+  <div class="settings-options">
+
+    <!-- LOCATION INPUT -->
+    <div class="option">
+      <div class="left-section">
+        <div class="icon-container">
+          <fa-icon [icon]="['fas', 'location-dot']" class="option-icon"></fa-icon>
+        </div>
+        <span>Ubicación</span>
+      </div>
+    </div>
+
+    <div class="location-inputs">
+      <div class="input-group">
+        <label>Latitud</label>
+        <input type="number" [(ngModel)]="latitude" step="0.0001" placeholder="Ej: 40.4168">
+      </div>
+      <div class="input-group">
+        <label>Longitud</label>
+        <input type="number" [(ngModel)]="longitude" step="0.0001" placeholder="Ej: -3.7038">
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="action-button primary" (click)="updateLocation()">Guardar Ubicación</button>
+      <button class="action-button secondary" (click)="updateCurrentLocation()">Detectar Automática</button>
+    </div>
+
+    <!-- CHOOSE MAP -->
+    <a routerLink="/settings/map-style" class="option-link">
+      <div class="option">
+        <div class="left-section">
+          <div class="icon-container">
+            <fa-icon [icon]="['fas', 'layer-group']" class="option-icon"></fa-icon>
+          </div>
+          <span>Escoger Mapa</span>
+        </div>
+
+        <div class="right-section">
+          <fa-icon [icon]="['fas', 'chevron-right']" class="option-icon"></fa-icon>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>

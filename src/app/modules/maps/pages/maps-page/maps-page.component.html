@@ -1,8 +1,11 @@
 <div class="maps-page">
-  <!--<div id="map" #map></div>-->
+  <div id="map" #map></div>
 
-  <!-- TODO: Mocked Image -->
-  <img id="map" src="assets/img/mapboxMocked.png" alt="">
-
-  <maps-navigation-controllers/>
+  <maps-navigation-controllers
+    [is3dActive]="is3dActive"
+    (recenter)="onRecenter()"
+    (zoomIn)="onZoomIn()"
+    (zoomOut)="onZoomOut()"
+    (toggle3d)="onToggle3d()"
+  />
 </div>

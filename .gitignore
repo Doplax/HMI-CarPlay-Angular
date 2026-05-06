@@ -46,3 +46,9 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
+
+
+#Otros
+.idx
+.claude
+.vscode

@@ -14,6 +14,13 @@ main {
   width: 100%;
 }
 
+.route-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  view-transition-name: home-content;
+}
+
 
 home-navigation{
   position: absolute;

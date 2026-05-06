@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WeatherApiResponse } from '../models/wather.model';
+import { WeatherApiResponse, WeatherHourlyApiResponse } from '../models/wather.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,5 +14,9 @@ export class WeatherService {
 
   getDailyStation(): Observable<WeatherApiResponse> {
       return  this.http.get<WeatherApiResponse>('/assets/api/weather/daily-station-data.json');
+  }
+
+  getHourlyStation(): Observable<WeatherHourlyApiResponse> {
+      return this.http.get<WeatherHourlyApiResponse>('/assets/api/weather/hourly-station-data.json');
   }
 }

@@ -1,3 +1,35 @@
-<div class="weather-page">
-  <weather-card [weatherData]="weatherData"/>
+<div class="weather-page" *ngIf="today">
+  <section class="hero">
+    <div class="hero-meta">MY LOCATION</div>
+    <h1 class="hero-city">Madrid</h1>
+    <div class="hero-temp">{{ toUnit(today.tavg) | number:'1.0-0' }}°</div>
+    <div class="hero-condition">{{ conditionLabel(today) }}</div>
+    <div class="hero-hilo">
+      <span>H:{{ toUnit(today.tmax) | number:'1.0-0' }}°</span>
+      <span>L:{{ toUnit(today.tmin) | number:'1.0-0' }}°</span>
+    </div>
+  </section>
+
+  <section class="weather-card hourly-card">
+    <div class="card-header">HOURLY FORECAST</div>
+    <div class="hourly-scroll">
+      <div class="hour" *ngFor="let h of upcomingHours; let i = index">
+        <span class="hour-label">{{ i === 0 ? 'Now' : (h.time | date:'h a') }}</span>
+        <span class="hour-icon">{{ conditionIcon(h) }}</span>
+        <span class="hour-temp">{{ toUnit(h.temp) | number:'1.0-0' }}°</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="weather-card daily-card">
+    <div class="card-header">10-DAY FORECAST</div>
+    <weather-card
+      *ngFor="let entry of dailyData"
+      [entry]="entry"
+      [globalMin]="rangeMin"
+      [globalMax]="rangeMax"
+      [icon]="conditionIcon(entry)"
+      [unit]="settingsService.getTemperatureUnit()"
+    />
+  </section>
 </div>

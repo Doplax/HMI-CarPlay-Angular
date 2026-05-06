@@ -1,0 +1,175 @@
+@use 'variables' as vars;
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.player {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: white;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(40px) saturate(140%);
+    -webkit-backdrop-filter: blur(40px) saturate(140%);
+    background-color: rgba(2, 2, 2, 0.55);
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .back-btn {
+    align-self: flex-start;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__body {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    min-height: 0;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+
+    .title {
+      font-size: vars.$font-size-title;
+      font-weight: 700;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .artist {
+      font-size: vars.$font-size-heading;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .album {
+      font-size: vars.$font-size-body;
+      opacity: 0.7;
+      margin-bottom: 24px;
+    }
+
+    .progress {
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: 16px;
+
+      &__bar {
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.25);
+        overflow: hidden;
+      }
+
+      &__fill {
+        height: 100%;
+        background: white;
+        transition: width 0.2s linear;
+      }
+
+      &__times {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6px;
+        font-size: vars.$font-size-caption;
+        opacity: 0.8;
+      }
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+
+      .control {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+        }
+
+        &--play {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+
+  &__artwork {
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    border-radius: vars.$card-border-radius;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .player__body {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .player__artwork {
+    width: 200px;
+    height: 200px;
+  }
+}

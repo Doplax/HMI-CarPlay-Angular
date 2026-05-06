@@ -1,0 +1,66 @@
+<div class="map-style-page">
+  <div class="map-preview-container">
+    <div id="map-preview" #mapPreview class="map-preview"></div>
+  </div>
+
+  <!-- Styles Selection Section -->
+  <div class="styles-container">
+    <!-- Leaflet Styles -->
+    <div class="styles-group">
+      <h3 class="group-title">OpenStreetMap</h3>
+      <div class="styles-grid">
+        @for (style of leafletStyles; track style.id) {
+          <div class="style-card"
+               [class.selected]="isSelected(style)"
+               (click)="selectStyle(style)">
+            @if (style.thumbnail) {
+              <img [src]="style.thumbnail" alt="{{ style.name }}" class="style-thumbnail">
+            } @else {
+              <div class="style-thumbnail-placeholder">
+                <fa-icon [icon]="['fas', 'map']"></fa-icon>
+              </div>
+            }
+            <div class="style-info">
+              <p class="style-name">{{ style.name }}</p>
+              <p class="style-provider">Leaflet</p>
+            </div>
+            @if (isSelected(style)) {
+              <div class="selected-badge">
+                <fa-icon [icon]="['fas', 'check-circle']"></fa-icon>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Mapbox Styles -->
+    <div class="styles-group">
+      <h3 class="group-title">Mapbox</h3>
+      <div class="styles-grid">
+        @for (style of mapboxStyles; track style.id) {
+          <div class="style-card"
+               [class.selected]="isSelected(style)"
+               (click)="selectStyle(style)">
+            @if (getThumbnail(style); as thumb) {
+              <img [src]="thumb" alt="{{ style.name }}" class="style-thumbnail">
+            } @else {
+              <div class="style-thumbnail-placeholder">
+                <fa-icon [icon]="['fas', 'map']"></fa-icon>
+              </div>
+            }
+            <div class="style-info">
+              <p class="style-name">{{ style.name }}</p>
+              <p class="style-provider">Mapbox</p>
+            </div>
+            @if (isSelected(style)) {
+              <div class="selected-badge">
+                <fa-icon [icon]="['fas', 'check-circle']"></fa-icon>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,25 @@
 //@use "variables" as vars;
 
-//Basic Colors
+// Basic Colors
 $highlighted-blue: #64D2FF;
-$basic-grey :#454545;
+$basic-grey: #454545;
 $background-color: #242424;
 
-//Icons
+// Icons
 $icon-color: #9C9C9C;
 $icon-color-active: $highlighted-blue;
 
-
-//Card Sizes
+// Card Sizes
 $card-border-radius: 20px;
 $card-min-height: 85px;
 $card-primary-text-size: 1.5rem;
 $card-secondary-text-size: 1rem;
+
+// Typography (Apple CarPlay HMI style)
+$font-size-title: 2.5rem;        // Page titles (40px)
+$font-size-heading: 1.5rem;      // Section headings (24px)
+$font-size-body: 1rem;           // Regular text (16px)
+$font-size-label: 0.875rem;      // Form labels (14px)
+$font-size-caption: 0.75rem;     // Small captions (12px)
+$font-size-tiny: 0.625rem;       // Tiny text (10px)
 
