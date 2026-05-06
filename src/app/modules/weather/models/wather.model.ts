@@ -20,3 +20,24 @@ export interface WeatherApiResponse {
   };
   data: WeatherDataEntry[]; // Array of weather entries
 }
+
+// Interface for a single hourly weather data entry
+export interface WeatherHourlyEntry {
+  time: string;
+  temp: number;
+  dwpt: number | null;
+  rhum: number | null;
+  prcp: number | null;
+  snow: number | null;
+  wdir: number | null;
+  wspd: number | null;
+  wpgt: number | null;
+  pres: number | null;
+  tsun: number | null;
+  coco: number | null; // Meteostat condition code
+}
+
+export interface WeatherHourlyApiResponse {
+  meta: { generated: string };
+  data: WeatherHourlyEntry[];
+}
